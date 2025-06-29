@@ -1,0 +1,66 @@
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+#command=$SCRIPT_DIR/$BLOCK_NAME
+#separator=" | "
+separator_block_width=12
+markup=pango
+#color=#28516C
+color=#77B3D9
+separator=" | "
+#separatorcolor=#77B3D9
+
+[Weather]
+command=$SCRIPT_DIR/weather_NOAA/weather_NOAA
+interval=1800
+
+
+[volume]
+label=  
+command=$SCRIPT_DIR/volume/volume
+interval=1
+signal=10
+
+[memory]
+command=$SCRIPT_DIR/memory/memory
+label= 󰍛 
+interval=5
+
+[disk]
+label=HOME
+interval=30
+
+[iface]
+interval=10
+separator=false
+
+[wifi]
+command=$SCRIPT_DIR/wifi/wifi
+label=wifi:
+interval=10
+separator=false
+
+[bandwidth]
+interval=5
+
+[cpu_usage]
+label=CPU
+interval=10
+min_width=CPU 100.00%
+
+[load_average]
+label=LOAD
+interval=10
+
+[battery]
+command=$SCRIPT_DIR/battery/battery
+label= 󰂄 
+interval=30
+
+[time]
+label= 󰃰 
+command=date '+%Y/%m/%d | %I:%M %p'
+interval=60
+

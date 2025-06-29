@@ -1,0 +1,47 @@
+//@theme "/usr/share/rofi/themes/android_notification.rasi"
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+//@theme "/usr/share/rofi/themes/DarkBlue.rasi"
+configuration{
+    modi:                   "window,drun,filebrowser,";
+    sidebar-mode:           true;
+    //show-icons:             true;
+    sort:                   true;
+    sorting-method:         "normal";
+    scroll-method:          0;
+    drun-display-format:    "{name}";
+    matching:               "fuzzy";
+    window-thumbnail:       true;
+    display-drun:           "Apps";
+    display-window:         "windows";
+    display-filebrowser:    "Files";
+
+filebrowser{
+    directories-first:      "true";
+    sorting-method:         "name";
+    }
+}
+
+@theme "/dev/null"
+
+* {
+    bg:                 #0f090f;
+    fg:                 #a304b5;
+    bgAlt:              #251b1f;
+    button:             #a304b5;
+    background-color:   @bg;
+    text-color:         @fg;
+}
+
+//@import "./Themes/style.rasi"
+
+mainbox{ children: [ mode-switcher, inputbar, listview ];}
+
+window{
+    transparency:       "real";
+    width:              700px;
+    border-radius:      5px;
+    height:             500px;
+    border:             10px;
+    border-color: @bg;
+}
+
