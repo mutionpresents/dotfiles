@@ -30,38 +30,38 @@ fastfetch
 
 ### 📦 Arch Linux:
 
-```bash
-sudo pacman -S --needed git stow i3 kitty neofetch fastfetch
+    bash
+    sudo pacman -S --needed git stow i3 kitty neofetch fastfetch
 
-📦 Debian/Ubuntu/Linux Mint:
+### 📦 Debian/Ubuntu/Linux Mint:
 
-sudo apt install git stow i3 kitty neofetch fastfetch
+    sudo apt install git stow i3 kitty neofetch fastfetch
 
-🚀 Setup Instructions
+### 🚀 Setup Instructions
 
-    Clone this repository
+Clone this repository
 
-git clone https://github.com/mutionpresents/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+    git clone https://github.com/mutionpresents/dotfiles.git ~/dotfiles
+    cd ~/dotfiles
 
-    Run the setup script
+    #Run the setup script
 
-./setup.sh
+    ./setup.sh
 
 This will install the necessary packages (on Arch) and symlink dotfiles using stow.
 🔁 Reapplying or Updating
 
 If you update your dotfiles:
 
-cd ~/dotfiles
-git pull
-./setup.sh
+    cd ~/dotfiles
+    git pull
+    ./setup.sh
 
-🧠 Notes
+### 🧠 Notes
 
-    Press Mod+Enter to open a terminal (Kitty).
+Press Mod+Enter to open a terminal (Kitty).
 
-    Wallpapers are stored in ~/Pictures/Wallpapers and are used with tools like feh, i3lock, or pywal.
+Wallpapers are stored in ~/Pictures/Wallpapers and are used with tools like feh, i3lock, or pywal.
 
     Make sure your terminal supports 24-bit color and UTF-8 for best results.
 
