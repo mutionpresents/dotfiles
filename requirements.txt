@@ -1,0 +1,10 @@
+git
+stow
+i3
+i3-gaps
+i3blocks-gaps
+picom
+rofi
+kitty
+neofetch
+fastfetch
