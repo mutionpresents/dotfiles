@@ -3,8 +3,8 @@
     "logo": {
 //        "type": "kitty",
         //"type": "file",
-        "width": 26,
-        "height": 13,  
+        "width": 30,
+        "height": 15,  
         "padding": {
             "top": 2,
             "bottom": 6
@@ -52,7 +52,7 @@
         "key": "Packages ",
     },
     {
-        "type": "font",
+        "type": "terminalfont",
         "key": "Font     ",
     },
     {
@@ -81,15 +81,12 @@
     },
     {
         "type": "resolution",
-        "key": "Display  ",   
+        "key": "Display  ",  
+        "command": "echo 1920x1080" 
     },
     {
         "type": "theme",
         "key": "Theme    "
-    },
-    {
-        "type": "font",
-        "key": "Font     ",
-    },    
+    }, 
   ]
 }

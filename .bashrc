@@ -17,12 +17,12 @@ export PATH="/usr/local/bin:$PATH"
 HISTCONTROL=ignoreboth
 
 # custom fastfetch
-fastfetch --kitty-direct /home/jeremiah/Desktop/Ascii-art-for-neofetch/Akame1.png
+fastfetch --kitty-direct /home/mution/Desktop/Ascii-art-for-neofetch/Akame1.png
 
 # append to the history file, don't overwrite it
 shopt -s histappend
 
-#fastfetch --kitty-direct /home/jeremiah/Desktop/Ascii-art-for-neofetch/rukia1_ascii.txt
+#fastfetch --kitty-direct /home/mution/Desktop/Ascii-art-for-neofetch/rukia1_ascii.txt
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
@@ -127,9 +127,13 @@ fi
 
 export PATH="$PATH:/opt/sublime_text"  # Default install location
 
-export PATH="/home/jeremiah/Downloads/pycharm-2025.1.2/bin:$PATH"
+export PATH="/home/mution/Downloads/pycharm-2025.1.2/bin:$PATH"
 
 # fastfetch
 export PATH="$PATH:$HOME/idea-IC-*/bin"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+export INPUT_METHOD=fcitx
