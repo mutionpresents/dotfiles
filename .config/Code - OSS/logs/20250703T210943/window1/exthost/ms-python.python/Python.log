@@ -1,0 +1,127 @@
+2025-07-03 21:10:21.246 [error] Unable to check if shell integration is active [Error: Extension 'ms-python.python' CANNOT use API proposal: terminalDataWriteEvent.
+Its package.json#enabledApiProposals-property declares:  but NOT terminalDataWriteEvent.
+ The missing proposal MUST be added and you must start in extension development mode or use the following command line switch: --enable-proposed-api ms-python.python
+	at L (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:113:29606)
+	at a.onDidWriteTerminalData (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:171:106190)
+	at new v (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:878107)
+	at ge (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1684812)
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688176
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688204
+	at Se (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688271)
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688751
+	at we (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688692)
+	at Pe (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688726)
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1685965
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1687570
+	at Array.reduce (<anonymous>)
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1687542
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1687824
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688204
+	at Se (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688271)
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688751
+	at we (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688692)
+	at Pe (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688726)
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1685965
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1715635
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1715656
+	at e._get (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1714669)
+	at e._getButThrowIfAsync (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1714729)
+	at e.get (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1710438)
+	at e.dynamicValue (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1700171)
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1686348
+	at Ee (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1686604)
+	at Se (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688320)
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688751
+	at we (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688692)
+	at Pe (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688726)
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1685965
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1685899
+	at Array.map (<anonymous>)
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1685870
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1687570
+	at Array.reduce (<anonymous>)
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1687542
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1687824
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688204
+	at Se (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688271)
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688751
+	at we (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688692)
+	at Pe (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1688726)
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1685965
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1715635
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1715656
+	at e._get (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1714669)
+	at e._getButThrowIfAsync (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1714729)
+	at e.get (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:1710438)
+	at a.get (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:536740)
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:451577
+	at async t.activateComponents (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:449857)
+	at async /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:2642626
+	at async e (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:2642158)
+	at async Wb.n (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:120:13382)
+	at async Wb.m (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:120:13345)
+	at async Wb.l (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:120:12801)]
+2025-07-03 21:10:21.246 [info] Starting Environment refresh
+2025-07-03 21:10:21.246 [info] Searching for interpreters in posix paths locator
+2025-07-03 21:10:21.246 [info] Searching for pyenv environments
+2025-07-03 21:10:21.246 [info] Searching for conda environments
+2025-07-03 21:10:21.246 [info] Searching for global virtual environments
+2025-07-03 21:10:21.246 [info] Searching for custom virtual environments
+2025-07-03 21:10:21.246 [info] pyenv is not installed
+2025-07-03 21:10:21.246 [info] Finished searching for pyenv environments: 25 milliseconds
+2025-07-03 21:10:21.246 [info] Finished searching for custom virtual envs: 23 milliseconds
+2025-07-03 21:10:21.246 [info] > conda info --json
+2025-07-03 21:10:21.246 [info] Finished searching for global virtual envs: 41 milliseconds
+2025-07-03 21:10:21.247 [info] Found: /bin/python --> /bin/python3.13
+2025-07-03 21:10:21.250 [info] Found: /bin/python3 --> /bin/python3.13
+2025-07-03 21:10:21.250 [info] Found: /bin/python3.13 --> /bin/python3.13
+2025-07-03 21:10:21.280 [info] Found: /sbin/python --> /sbin/python3.13
+2025-07-03 21:10:21.281 [info] Found: /sbin/python3 --> /sbin/python3.13
+2025-07-03 21:10:21.281 [info] Found: /sbin/python3.13 --> /sbin/python3.13
+2025-07-03 21:10:21.288 [info] Found: /usr/bin/python --> /usr/bin/python3.13
+2025-07-03 21:10:21.289 [info] Found: /usr/bin/python3 --> /usr/bin/python3.13
+2025-07-03 21:10:21.289 [info] Found: /usr/bin/python3.13 --> /usr/bin/python3.13
+2025-07-03 21:10:21.324 [info] Found: /usr/sbin/python --> /usr/sbin/python3.13
+2025-07-03 21:10:21.324 [info] Found: /usr/sbin/python3 --> /usr/sbin/python3.13
+2025-07-03 21:10:21.324 [info] Found: /usr/sbin/python3.13 --> /usr/sbin/python3.13
+2025-07-03 21:10:21.348 [info] > /bin/python -I ~/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/python_files/get_output_via_markers.py ~/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/python_files/interpreterInfo.py
+2025-07-03 21:10:21.364 [info] > /sbin/python -I ~/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/python_files/get_output_via_markers.py ~/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/python_files/interpreterInfo.py
+2025-07-03 21:10:21.373 [info] Finished searching for interpreters in posix paths locator: 182 milliseconds
+2025-07-03 21:10:21.381 [info] Environments refresh paths discovered (event): 191 milliseconds
+2025-07-03 21:10:21.381 [info] Environments refresh paths discovered: 191 milliseconds
+2025-07-03 21:10:21.427 [info] > /usr/bin/python -I ~/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/python_files/get_output_via_markers.py ~/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/python_files/interpreterInfo.py
+2025-07-03 21:10:21.443 [info] > /usr/sbin/python -I ~/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/python_files/get_output_via_markers.py ~/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/python_files/interpreterInfo.py
+2025-07-03 21:10:21.516 [info] Environments refresh finished (event): 326 milliseconds
+2025-07-03 21:10:21.528 [info] Environment refresh took 339 milliseconds
+2025-07-03 21:10:21.536 [error] [
+  'Failed to activate a workspace, Class name = v, completed in 349ms, has a falsy return value, Arg 1: undefined, Arg 2: {"started":1751577021111}, Return Value: undefined',
+  [Error: Extension 'ms-python.python' CANNOT use API proposal: testObserver.
+  Its package.json#enabledApiProposals-property declares:  but NOT testObserver.
+   The missing proposal MUST be added and you must start in extension development mode or use the following command line switch: --enable-proposed-api ms-python.python
+  	at L (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:113:29606)
+  	at get testResults (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:171:99396)
+  	at C.activate (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:908659)
+  	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:2457
+  	at Array.map (<anonymous>)
+  	at v.activateWorkspace (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:2447)]
+]
+2025-07-03 21:10:21.536 [error] Failure during activation. [Error: Extension 'ms-python.python' CANNOT use API proposal: testObserver.
+Its package.json#enabledApiProposals-property declares:  but NOT testObserver.
+ The missing proposal MUST be added and you must start in extension development mode or use the following command line switch: --enable-proposed-api ms-python.python
+	at L (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:113:29606)
+	at get testResults (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:171:99396)
+	at C.activate (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:908659)
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:2457
+	at Array.map (<anonymous>)
+	at v.activateWorkspace (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:2447)]
+2025-07-03 21:10:21.536 [error] sendStartupTelemetry() failed. [Error: Extension 'ms-python.python' CANNOT use API proposal: testObserver.
+Its package.json#enabledApiProposals-property declares:  but NOT testObserver.
+ The missing proposal MUST be added and you must start in extension development mode or use the following command line switch: --enable-proposed-api ms-python.python
+	at L (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:113:29606)
+	at get testResults (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:171:99396)
+	at C.activate (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:908659)
+	at /home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:2457
+	at Array.map (<anonymous>)
+	at v.activateWorkspace (/home/mution/.vscode-oss/extensions/ms-python.python-2025.4.0-universal/out/client/extension.js:2:2447)]
+2025-07-03 21:10:21.542 [info] Python interpreter path: /bin/python
+2025-07-03 21:10:23.505 [info] Starting Jedi language server for default.

@@ -1,0 +1,6 @@
+[Default Applications]
+video/webm=gcr-viewer.desktop
+
+[Added Associations]
+video/webm=gcr-viewer.desktop;
+text/plain=org.x.editor.desktop;
