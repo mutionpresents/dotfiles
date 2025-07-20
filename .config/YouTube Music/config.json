@@ -1,0 +1,70 @@
+{
+	"window-size": {
+		"width": 935,
+		"height": 493
+	},
+	"window-maximized": false,
+	"window-position": {
+		"x": 969,
+		"y": 60
+	},
+	"url": "https://music.youtube.com/watch?v=CWUxKMF2w2U&list=RDAMVMcYPJaHT5f3E&index=0",
+	"options": {
+		"tray": false,
+		"appVisible": true,
+		"autoUpdates": true,
+		"alwaysOnTop": false,
+		"hideMenu": false,
+		"hideMenuWarned": false,
+		"startAtLogin": false,
+		"disableHardwareAcceleration": false,
+		"removeUpgradeButton": false,
+		"restartOnConfigChanges": false,
+		"trayClickPlayPause": false,
+		"autoResetAppCache": false,
+		"resumeOnStart": true,
+		"likeButtons": "",
+		"proxy": "",
+		"startingPage": "",
+		"overrideUserAgent": false,
+		"usePodcastParticipantAsArtist": false,
+		"themes": []
+	},
+	"plugins": {
+		"notifications": {},
+		"video-toggle": {
+			"mode": "custom"
+		},
+		"precise-volume": {
+			"globalShortcuts": {}
+		},
+		"discord": {
+			"listenAlong": true
+		},
+		"downloader": {
+			"enabled": true,
+			"downloadFolder": "/home/mution/Music/Study Music [Calm]",
+			"downloadOnFinish": {
+				"enabled": false,
+				"seconds": 20,
+				"percent": 10,
+				"mode": "seconds",
+				"folder": "/home/mution/Music/Study Music [Calm]"
+			},
+			"selectedPreset": "mp3 (256kbps)",
+			"customPresetSetting": {
+				"extension": "mp3",
+				"ffmpegArgs": [
+					"-b:a",
+					"256k"
+				]
+			},
+			"skipExisting": false
+		}
+	},
+	"__internal__": {
+		"migrations": {
+			"version": "3.9.0"
+		}
+	}
+}

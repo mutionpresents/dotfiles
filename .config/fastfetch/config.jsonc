@@ -3,8 +3,8 @@
     "logo": {
 //        "type": "kitty",
         //"type": "file",
-        "width": 30,
-        "height": 18,  
+        "width": 26,
+        "height": 13,  
         "padding": {
             "top": 2,
             "bottom": 6
@@ -18,13 +18,13 @@
         //"separator": "  "
     },
   "modules": [
+    "break",
     //"break",
-    //"break",
-    {   
-        "type": "title",
-        "key": "        ",
-        
-    },
+    //{   
+      //  "type": "title",
+        //"key": "        ",
+	//"keyColor": "31",        
+    //},
     "break",
     {
         "type": "datetime",

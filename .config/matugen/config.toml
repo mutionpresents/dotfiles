@@ -1,0 +1,37 @@
+[config.wallpaper]
+command= "swww"
+arguments = ["img", "--transition-type", "center", "--transition-step", "1", "--transition-fps", "60"]
+set = false
+# ...
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/colors.conf'
+post_hook = 'hyprctl reload'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/waybar/colors.css'
+#post_hook = 'pkill -SIGUSR2 waybar'
+# --
+
+#[config]
+# ...
+
+[templates.wofi]
+input_path = '~/.config/matugen/templates/wofi-colors.css'
+output_path = '~/.config/wofi/style.css'
+
+
+[templates.gtk3]
+input_path = 'path/to/template'
+output_path = '~/.config/gtk-3.0/colors.css'
+
+[templates.gtk4]
+input_path = 'path/to/template'
+output_path = '~/.config/gtk-4.0/colors.css'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors.conf'
+post_hook = "kitty @ set-colors -a -c ~/.config/kitty/colors.conf"
