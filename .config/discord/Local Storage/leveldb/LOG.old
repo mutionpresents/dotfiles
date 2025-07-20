@@ -1,8 +1,0 @@
-2025/07/17-09:17:52.197 14a5f Reusing MANIFEST /home/mution/.config/discord/Local Storage/leveldb/MANIFEST-000001
-2025/07/17-09:17:52.225 14a5f Recovering log #20
-2025/07/17-09:17:52.266 14a5f Level-0 table #23: started
-2025/07/17-09:17:52.297 14a5f Level-0 table #23: 1554990 bytes OK
-2025/07/17-09:17:52.298 14a5f Recovering log #23
-2025/07/17-09:17:52.298 14a5f Reusing old log /home/mution/.config/discord/Local Storage/leveldb/000023.log 
-2025/07/17-09:17:52.303 14a5f Delete type=0 #20
-2025/07/17-09:17:52.303 14a5f Delete type=2 #24
