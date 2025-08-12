@@ -1,0 +1,3 @@
+hexadecimal format:
+#RRGGBB
+ex: #ffffff (white)

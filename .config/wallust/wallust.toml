@@ -7,4 +7,5 @@ saturation = 50
 [templates]
 kitty = { template = 'kitty.conf', target = '~/.config/kitty/current-theme.conf' }
 waybar = { template = 'waybar.css', target = '~/.config/waybar/colors.css' }
-discord = { template = 'discord.css', target = '~/.cache/wallust/discord.css' }
+discord = { template = 'wallust-default.css', target = '~/.cache/wallust/discord.css' }
+hyprland = { template = 'hyprland.conf', target = '~/.config/hypr/colors.conf'}
