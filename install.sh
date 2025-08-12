@@ -334,14 +334,86 @@ enable_services() {
     fi
 }
 
+# Install additional fonts
+install_fonts() {
+    echo -e "${YELLOW}🔤 Installing additional fonts...${NC}"
+    
+    # Create fonts directory
+    mkdir -p "$HOME/.local/share/fonts"
+    
+    # Define required fonts that might not be in package managers
+    local required_fonts=(
+        "JetBrainsMono Nerd Font"
+        "FiraCode Nerd Font" 
+        "Hack Nerd Font"
+        "Font Awesome"
+    )
+    
+    # Check if fonts directory exists in dotfiles
+    if [ -d "$LOCAL_DIR/share/fonts" ]; then
+        echo -e "${BLUE}Installing custom fonts from dotfiles...${NC}"
+        cp -r "$LOCAL_DIR/share/fonts"/* "$HOME/.local/share/fonts/" 2>/dev/null || true
+    fi
+    
+    # Download popular Nerd Fonts if not present
+    for font in "${required_fonts[@]}"; do
+        if ! fc-list | grep -qi "${font}"; then
+            echo -e "${YELLOW}Font '${font}' not found. Consider installing it manually.${NC}"
+        else
+            echo -e "${GREEN}✅ Font '${font}' is available${NC}"
+        fi
+    done
+    
+    # Offer to download Nerd Fonts
+    if ! fc-list | grep -qi "nerd font"; then
+        echo -e "${YELLOW}⚠️  No Nerd Fonts detected. These are recommended for terminal and Waybar icons.${NC}"
+        read -p "Download JetBrainsMono Nerd Font? (y/N): " -n 1 -r
+        echo
+        if [[ $REPLY =~ ^[Yy]$ ]]; then
+            download_nerd_font "JetBrainsMono"
+        fi
+    fi
+}
+
+# Download Nerd Font
+download_nerd_font() {
+    local font_name="$1"
+    echo -e "${BLUE}Downloading ${font_name} Nerd Font...${NC}"
+    
+    local font_url="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/${font_name}.zip"
+    local temp_dir=$(mktemp -d)
+    
+    if command -v wget &> /dev/null; then
+        wget -q "$font_url" -O "$temp_dir/${font_name}.zip"
+    elif command -v curl &> /dev/null; then
+        curl -sL "$font_url" -o "$temp_dir/${font_name}.zip"
+    else
+        echo -e "${RED}❌ Neither wget nor curl found. Cannot download fonts.${NC}"
+        return 1
+    fi
+    
+    if [ -f "$temp_dir/${font_name}.zip" ]; then
+        echo -e "${BLUE}Extracting ${font_name}...${NC}"
+        unzip -q "$temp_dir/${font_name}.zip" -d "$HOME/.local/share/fonts/"
+        rm -rf "$temp_dir"
+        echo -e "${GREEN}✅ ${font_name} Nerd Font installed${NC}"
+    else
+        echo -e "${RED}❌ Failed to download ${font_name}${NC}"
+    fi
+}
+
 # Post-installation setup
 post_install_setup() {
     echo -e "${YELLOW}🔧 Running post-installation setup...${NC}"
     
+    # Install fonts
+    install_fonts
+    
     # Update font cache
     if command -v fc-cache &> /dev/null; then
         echo -e "${BLUE}Updating font cache...${NC}"
-        fc-cache -f
+        fc-cache -fv
+        echo -e "${GREEN}✅ Font cache updated${NC}"
     fi
     
     # Update XDG database
