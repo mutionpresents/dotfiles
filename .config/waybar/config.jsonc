@@ -1,283 +1,250 @@
-{
-  "layer": "top",
-  "output": ["*"],
-  "position": "top",
-  "mode": "dock",
-  "exclusive": true,
-  "passthrough": false,
-  "reload_style_on_change": true,
-  //"margin-top": 2,
-  //"margin-left": 5,
-  //"margin-right": 5,
-  //"margin-bottom": 2,
- "margin": "2 2px",
-  //"padding": "0 0px",
-  //"height": 5,
-  //"include":[
-    //"$XDG_CONFIG_HOME/waybar/modules/*json*", // This can be used on waybar-git
-    //"$XDG_DATA_HOME/waybar/modules/*json*" // This can be used on waybar-git
-    // "$XDG_CONFIG_HOME/waybar/includes/includes.json" // This will be deprecated if waybar 0.12.0 is released on debian
-//],
-  "modules-left": ["custom/launcher", "custom/themify", "hyprland/workspaces", "custom/media"],
-  "modules-center": ["clock"],
-  "modules-right": ["pulseaudio", "backlight", "cpu", "memory", "disk", "battery"],
-  
+[
+  {
+    "layer": "top",
+    "output": ["*"],
+    "position": "top",
+    "mode": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "reload_style_on_change": true,
+    "margin": "2 2px",
+    "modules-left": ["custom/launcher", "custom/themify", "hyprland/workspaces", "custom/media"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "pulseaudio", "backlight", "cpu", "memory", "battery", "custom/power"],
+"right/tray": {
+	"orientation": "inherit",
+	"modules": ["pulseaudio","backlight","cpu","memory","battery"]},
 
-//  "modules-left": ["group/leaf-inverse"],
-//  "modules-center": ["group/pill#1", "group/pill-in#center", "group/pill#2"],
-//  "modules-right": ["group/leaf"],  
-    //  ? Declaring the groups
-  "group/pill#2": {
-    "orientation": "inherit",
-    "modules": ["custom/hyprsunset", "idle_inhibitor"]
-  },
-  "group/pill#1": {
-    "orientation": "inherit",
-    "modules": ["custom/weather"]
-},
-  "group/leaf-inverse": {
-    "orientation": "inherit",
-    "modules": ["hyprland/workspaces", "wlr/taskbar"]
-  },
-  "group/pill-in#center": {
-    "orientation": "inherit",
-    "modules": [
-      "keyboard-state",
-      "clock",
-      "custom/updates",
-      "custom/keybindhint",
-      "custom/gamemode"
-    ]
-  },
-  "group/leaf": {
-    "orientation": "inherit",
-    "modules": [
-      "privacy",
-      "backlight",
-      "tray",
-      "network#bandwidthUpBytes",
-      "network#bandwidthDownBytes",
-      "custom/bluetooth",
-      "pulseaudio",
-      "pulseaudio#microphone",
-      "battery",
-      "power-profiles-daemon",
-      "custom/gpuinfo",
-      "custom/cpuinfo",
-      "custom/sensorsinfo",
-      "custom/swaync",
-      "custom/dunst",
-      "custom/hyde-menu"
-    ]
-  },
-  "group/pill-in#clipboard": {
-    "orientation": "inherit",
-    "modules": ["custom/clipboard"]
-  },
-
-"custom/notification": {
-    "tooltip": false,
-    "format": "{icon}",
-    "format-icons": {
-      "notification": "<span foreground='red'><sup></sup></span>",
-      "none": "",
-      "dnd-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-none": "",
-      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "inhibited-none": "",
-      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-inhibited-none": ""
-    },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
-  },
-
-  "custom/launcher": {
-    "format": "",
-    "on-click": "bash /home/$USER/.config/waybar/scripts/app_launcher.sh",
-    "tooltip-format": "Launch your favorite apps"
-  },
-
-  "custom/themify": {
-	"format": "󰸉",
-	"on-click": "bash /home/$USER/.config/waybar/scripts/theme_changer.sh",
-	"tooltip-format": "Change your theme"
-  },
-
-  "custom/pacman": {
-    "format": "  {}",
-    "interval": "once",
-    "exec": "checkupdates | wc -l",
-    "on-click": "update-system",
-    "signal": 8,
-    "tooltip-format": "{} updates available"
-  },
-
-  "custom/media": {
-    "format": "{}",
-    //"format-alt": "{}",
-    "escape": true,
-    "return-type": "json",
-    "max-length": 30,
-    "on-click": "playerctl play-pause",
-    "on-click-right": "playerctl stop",
-    "smooth-scrolling-threshold": 1, // This value was tested using a trackpad, it should be lowered if using a mouse.
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous",
-    "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources/custom_modules folder
-  },
-
-  "custom/battery": {
-    "exec": "~/.config/waybar/scripts/battery_health.sh",
-    "interval": 300, // update per 5 min
-    "format": "{}",
-    "tooltip": false
-  },
-
-  "battery": {
-    "format": "{icon}  {capacity}% ({time})",
-    "format-charging": "{icon} {capacity}% ({time})",  // time to full
-    "format-discharging": "{icon} {capacity}% ({time})", // time left
-    "format-plugged": "{icon} {capacity}% (plugged)",
-    "format-full": "{icon} {capacity}% (full)",
-    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-    "tooltip-format": "Battery is at {capacity}%" 
-  },
-
-  "clock": {
-    "timezone": "America/Los_Angeles",
-    "format": "󰃰  {:%a %d %b  %I:%M %p}",
-  /*  "format-alt": "󰥔  {:%a, %d. %b  %I:%M %p}", */
-    "tooltip-format": "Date: {:%Y-%m-%d} Time: {:%I:%M %p} "
-  },
-
-  "pulseaudio": {
-    "format": "{icon}  {volume}%",
-    "format-bluetooth": "󰂱 {volume}%",
-    "format-muted": "󰖁",
-    "scroll-step": 1,
-    "on-click": "pavucontrol",
-    "ignored-sinks": ["Easy Effects Sink"],
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "󰋎",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["󰖀", "󰕾"]
-    },
-    "tooltip-format": "Volume: {volume}%"
-  },
-
-  "network": {
-    "interface": "wlo1",
-    "format": "{ifname}",
-    /*"format-wifi": "{icon}  {essid} ({signalStrength}%)",*/
-    "format-wifi": "{icon} ({signalStrength%})",
-    "format-ethernet": "󰈀  Wired: {ipaddr}",
-    "format-disconnected": "󰤭  Disconnected",
-    "interval": 5,
-    "max-length": 50,
-    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-    "tooltip-format": "Connected to {essid}"
-  },
-
-  "hyprland/workspaces": {
-    "format": "{icon}",
-    "on-click": "activate",
-    "format-icons": {
-      "1": "Ⅰ",
-      "2": "Ⅱ",
-      "3": "Ⅲ",
-      "4": "Ⅳ",
-      "5": "Ⅴ",
-      "6": "Ⅵ",
-      "7": "Ⅶ",
-      "8": "Ⅷ",
-      "9": "Ⅸ",
-      "10": "Ⅹ"
-      //"1": "일",
-      //"2": "이",
-      //"3": "삼",
-      //"4": "사",
-      //"5": "오",
-      //"6": "육",
-      //"7": "칠",
-      //"8": "팔",
-      //"9": "구",
-      //"10": "십"
-
-
-    },
-    "persistent-workspaces": {
-      "*": 5 // 5 workspaces by default on every monitor
-    },
-    "sort-by-number": true
-  },
-
-  "backlight": {
-    "device": "intel_backlight",
-    "format": "{icon}   {percent}%",
-    "format-icons": ["󰃞", "󰃟", "󰃠"]
-  },
-
-  //"custom/weather": {
-  //  "exec": "$~/.config/waybar/scripts/get_weather.sh Los+Angeles+US",
-  //  "return-type": "json",
-  //  "format": "{}",
-  //  "tooltip": true,
-  //  "interval": 3600
-  //},
-
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power mode: {profile}",
+"custom/power": {
+    "format": "⏻",
     "tooltip": true,
-    "format-icons": {
-      "default": "",
-      "performance": "󰠠",
-      "balanced": "󰚀",
-      "power-saver": "󰌪"
-    }
+    "tooltip-format": "Power Menu\nLeft: Power Menu\nMiddle: Lock\nRight: Sleep",
+    "on-click": "bash ~/.config/waybar/scripts/power_menu.sh",
+    "on-click-middle": "hyprlock",
+    "on-click-right": "systemctl suspend"
   },
+  "tray": {
+	"spacing": 10
+	},
 
-  "hyprland/window": {
-    "format": "{class}",
-    "separate-outputs": true,
-    "icon": true,
-    "icon-size": 18
+    "custom/notification": {
+      "tooltip": false,
+      "format": "{icon}",
+      "format-icons": {
+        "notification": "<span foreground='red'><sup></sup></span>",
+        "none": "",
+        "dnd-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-none": "",
+        "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "inhibited-none": "",
+        "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-inhibited-none": ""
+      },
+      "return-type": "json",
+      "exec-if": "which swaync-client",
+      "exec": "swaync-client -swb",
+      "on-click": "swaync-client -t -sw",
+      "on-click-right": "swaync-client -d -sw",
+      "escape": true
+    },
+
+    "custom/launcher": {
+      "format": "",
+      "on-click": "bash /home/$USER/.config/waybar/scripts/app_launcher.sh",
+      "tooltip-format": "Launch your favorite apps"
+    },
+
+    "custom/themify": {
+      "format": "󰸉",
+      "on-click": "bash /home/$USER/.config/waybar/scripts/theme_changer.sh",
+      "tooltip-format": "Change your theme"
+    },
+
+    "custom/pacman": {
+      "format": "  {}",
+      "interval": "once",
+      "exec": "checkupdates | wc -l",
+      "on-click": "update-system",
+      "signal": 8,
+      "tooltip-format": "{} updates available"
+    },
+
+    "custom/media": {
+      "format": "{}",
+      "format-alt": "{}",
+      "escape": true,
+      "return-type": "json",
+      "max-length": 30,
+      "on-click": "playerctl play-pause",
+      "on-click-right": "playerctl stop",
+      "smooth-scrolling-threshold": 1,
+      "on-scroll-up": "playerctl next",
+      "on-scroll-down": "playerctl previous",
+      "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null"
+    },
+
+    "custom/battery": {
+      "exec": "~/.config/waybar/scripts/battery_health.sh",
+      "interval": 300,
+      "format": "{}",
+      "tooltip": false
+    },
+
+    "battery": {
+      "format": "{icon}  {capacity}%",
+      "format-charging": "{icon} {capacity}%",
+      "format-discharging": "{icon} {capacity}%",
+      "format-plugged": "{icon} {capacity}% (plugged)",
+      "format-full": "{icon} {capacity}% (full)",
+      "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+/*      "tooltip-format": "Battery is at {capacity}%" */
+      "tooltip-format": "Battery is at {capacity}%, ({time}) left."
+
 },
 
-  "backlight":{
-    "device": "intel_backlight",
-    "format": "󰃠 {percent}%",
-    "interval": "once",
-    "exec": "brightnessctl -m | awk -F, '{print $4}' | tr -d %",
-    "exec-on-event": true  // Updates when brightness changes    
-  },
-  
-  "cpu": {
-    "interval": 10,
-    "format": "CPU: {:.2f}%",
-    "max-length": 20
-  },
+    "clock": {
+      "timezone": "America/Los_Angeles",
+      "format": "󰃰  {:%a %d %b  %I:%M %p}",
+      "tooltip-format": "Date: {:%Y-%m-%d} Time: {:%I:%M %p}"
+    },
 
-  "memory": {
-    "interval": 10,
-    "format": "Mem: {}%",
-    "max-length": 20
-  },
+    "pulseaudio": {
+      "format": "{icon}  {volume}%",
+      "format-bluetooth": "󰂱 {volume}%",
+      "format-muted": "󰖁",
+      "scroll-step": 1,
+      "on-click": "pavucontrol",
+      "ignored-sinks": ["Easy Effects Sink"],
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "󰋎",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["󰖀", "󰕾"]
+      },
+      "tooltip-format": "Volume: {volume}%"
+    },
 
-  "disk": {
-    "interval": 30,
-    /*"format": "   {percentage_used}% used on {path}",*/
-    "format": "Disk: {percentage_used}%",
-    "path": "/",
-    "max-length": 20
+    "network": {
+      "interface": "wlp0s20f3",
+      "format": "{icon} ({signalStrength%})",
+      "format-wifi": "{icon} ({signalStrength%})",
+      "format-ethernet": "󰈀  Wired: {ipaddr}",
+      "format-disconnected": "󰤭  Disconnected",
+      "interval": 5,
+      "max-length": 50,
+      "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+      "tooltip-format": "Connected to {essid}"
+    },
+
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "format-icons": {
+        "1": "Ⅰ",
+        "2": "Ⅱ",
+        "3": "Ⅲ",
+        "4": "Ⅳ",
+        "5": "Ⅴ",
+        "6": "Ⅵ",
+        "7": "Ⅶ",
+        "8": "Ⅷ",
+        "9": "Ⅸ",
+        "10": "Ⅹ"
+      },
+      "persistent-workspaces": {
+        "*": 5
+      },
+      "sort-by-number": true
+    },
+
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "{icon}   {percent}%",
+      "format-icons": ["󰃞", "󰃟", "󰃠"]
+    },
+
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power mode: {profile}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "󰠠",
+        "balanced": "󰚀",
+        "power-saver": "󰌪"
+      }
+    },
+
+    "hyprland/window": {
+      "format": "{class}",
+      "separate-outputs": true,
+      "icon": true,
+      "icon-size": 18
+    },
+
+    "cpu": {
+      "interval": 10,
+      "format": "CPU: {:.2f}%",
+      "max-length": 20
+    },
+
+    "memory": {
+      "interval": 10,
+      "format": "Mem: {}%",
+      "max-length": 20
+    },
+
+    "disk": {
+      "interval": 30,
+      "format": "Disk: {percentage_used}%",
+      "path": "/",
+      "max-length": 20
+    }
   }
-}
+]
+/*  {
+    "layer": "top",
+    "position": "bottom",
+    "height": 18,
+    "width": 2,
+    "modules-left": [
+      "custom/manga"
+    ],
+    "modules-center": [
+      "sway/mode",
+      "wlr/taskbar"
+    ],
+    "margin": "4",
+    "spacing": "5",
+    "sway/window": {
+      "max-length": 50
+    },
+    "custom/manga": {
+      "format": "📁   ",
+      "on-click": "pcmanfm",
+      "tooltip": false
+		
+    },
+    "wlr/taskbar": {
+      
+//        "exec": "~/.config/waybar/scripts/taskbar.sh",
+//	"return-type": "json",
+//        "interval": 1,
+//       "format": "{}",
+//        "on-click": "~/.config/waybar/scripts/taskbar-click.sh"
+
+	"format": "{icon}",
+	"icon-size": 18,
+	"spacing": 3,
+	"group-by": "class",
+	"on-click-middle": "close",
+	"tooltip-format": "{title}",
+	"ignore-list": [],
+	"on-click": "activate"
+    }
+  }
+]
+*/

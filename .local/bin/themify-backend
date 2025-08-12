@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Check if the user porvided an argument
+# Check if the user provided an argument
 if [ "$#" -ne 1 ]; then
-	echo "Usage: $0 <path_to_image>"
-	exit 1
-fi 
+    echo "Usage: $0 <path_to_image>"
+    exit 1
+fi
 
 IMAGE="$1"
 
@@ -12,55 +12,31 @@ IMAGE="$1"
 notify-send "Changing Theme" "Applying new wallpaper and updating colors, please wait until confirmation..."
 
 # Set wallpaper
-swww img "$IMAGE" --transition-type fade
+swww img "$IMAGE" --transition-type center --transition-fps 60
+#sleep 3
 
-#export COLORTERM=truecolor
+# Use wallust to generate colors and apply templates
+if ! wallust run "$IMAGE"; then
+    notify-send "Wallust Failed" "Trying fallback methods..."
+    # Fallback: Try different backend
+    if ! wallust run "$IMAGE" --backend thumb; then
+        notify-send "Error" "Could not generate colors from this image"
+        exit 1
+    fi
+fi
 
-wal -i "$IMAGE" #--force-color # -s -6 #-n -s -t -e #--no-set
-#if ! wal -i "$IMAGE"; then
-#	notify-send "Error" "Failed to generate colors with pywal"
-#   exit 1
-#fi
 
 
+# Reload kitty
+pkill -USR1 kitty 2>/dev/null
 
-# Make nvim use pywal colors
+# Make nvim use colorscheme colors
 # Not configured yet (set up later)
 #python3 /home/user0/.config/nvim/pywal/chadwal.py
 
-# Refresh Spotify
-# Not configured yet (set up later)
-# pywal-spicetify Dribblish
-
-# Use Matugen to generate Material you colors
-matugen image "$IMAGE"
-if ! matugen image "$IMAGE"; then
-    notify-send "Error" "Failed to generate Material You colors"
-    exit 1
-fi
-# Kitty Change colors
-#if pidof kitty > /dev/null; then
-#  kill -SIGUSR1 $(pidof kitty)
-#else
-#  echo "Kitty not running"
-#fi
-
-if pgrep -x kitty > /dev/null; then
-    # Check if matugen generated kitty colors
-    if [ -f ~/.config/matugen/colors-kitty.conf ]; then
-        ln -sf ~/.config/matugen/templates/kitty-colors.conf ~/.config/kitty/colors.conf
-        if ! kitty @ set-colors --all ~/.config/matugen/templates/kitty-colors.conf 2>/dev/null; then
-            echo "Warning: Could not update kitty colors via socket"
-        fi
-    else
-        echo "Warning: Matugen kitty colors not found"
-    fi
-else
-    echo "Kitty not running, colors will apply on next start"
-fi
 # Refresh Waybar
 pkill waybar
-sleep 1 #Wait for waybar to fully close
+sleep 1
 waybar > /dev/null 2>&1 &
 
 # Refresh swaync
@@ -69,6 +45,3 @@ sleep 1 # Wait for swaync to fully close
 swaync > /dev/null 2>&1 &
 
 notify-send "Theme Applied" "Wallpaper and theme updated successfully!"
-
-
-

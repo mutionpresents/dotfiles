@@ -1,0 +1,21 @@
+/* Basic wallust colors */
+@define-color background {{background}};
+@define-color foreground {{foreground}};
+@define-color background-alt {{color0}};
+@define-color primary {{color5}};
+
+/* Material Design 3 color mappings */
+@define-color surface_container_low {{color0}};
+@define-color surface_container {{color0}};
+@define-color surface_container_high {{color1}};
+@define-color outline_variant {{color7}};
+@define-color error {{color5}};
+@define-color on_error {{background}};
+@define-color surface {{background}};
+@define-color on_surface {{foreground}};
+@define-color primary_container {{color5}};
+@define-color on_primary {{background}};
+@define-color secondary {{color2}};
+@define-color secondary_container {{color2}};
+@define-color tertiary {{color6}};
+@define-color border_color {{color1}};

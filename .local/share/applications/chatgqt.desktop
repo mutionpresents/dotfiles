@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=ChatGQT
+Comment=Qt6 based ChatGPT Webview Client
+Exec=/usr/bin/chatgqt
+Icon=chatgpt-light
+Terminal=false
+Type=Application
+Categories=Network;Chat;
+StartupNotify=true
+StartupWMClass=chatgqt

@@ -2,15 +2,21 @@
 
 * {
   font-family: "DM Sans", "JetBrainsMono Nerd Font Propo", sans-serif;
-  font-size: 11px;
+  font-size: 8px;
   border-radius: 50px;
-  font-weight: bold;
+  font-weight: 900;
+  text-shadow: 1px 0 0 currentColor;
+  min-height: 10px;
 }
 
 window#waybar {
-  background-color: transparent;
+/*  background-color: transparent;
+*/
+  background-color: rgba(0,0,0,0);
+
   color: @foreground;
-  min-height: 10px;
+  min-height: 0;
+  padding: 0px 0px;
 }
 
 .modules-right {
@@ -18,9 +24,13 @@ window#waybar {
 }
 
 #workspaces {
-  background-color: @surface_container_low;
+/*  background-color: @surface_container_low;
+*/
+  background-color: rgba(0,0,0,0.25);
+
 /*  padding: 1px 1px 1px 1px;
-*/  border-radius: 50px;
+*/  
+  border-radius: 50px;
   margin-left: 3px;
   font-weight: 500;
   font-size: 11px;
@@ -48,7 +58,9 @@ window#waybar {
 }
 
 #workspaces button {
-  background-color: @background-alt;
+/*  background-color: @background-alt; */
+  background-color: rgba(0,0,0,0);
+
   color: @foreground;
   transition: margin 150ms ease-in-out, padding 150ms ease-in-out;
   transition: background-color 0.3s ease, color 0.3s ease, padding 0.2s ease;
@@ -80,19 +92,21 @@ window#waybar {
 #custom-themify,
 #custom-notification,
 #custom-battery,
+#custom-power,
 #power-profiles-daemon {
   color: @primary;
-  background-color: rgba(0,0,0,0.65);
-  /*background-color: @surface_container;*/
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  /*border: 1px solid @border_color;
+  background-color: rgba(0,0,0,0.25);
+/*  background-color: @surface_container;*/
+/*  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.55);
+*/
+/*border: 1px solid @border_color;
   */
   font-weight: 500;
-  font-size: 11px;
+  font-size: 10px;
   min-width: 0;
   min-height: 0;
   padding: 0 15px 0 15px;
-  margin: 0 3 0 3px;
+  margin: 0 3px 0 3px;
 }
 
 
@@ -106,8 +120,14 @@ window#waybar {
 }
 
 window#waybar.empty #window {
-    background-color: transparent;
+    background-color: rgba(0,0,0,0.25);
 }
 
-
-
+#custom-os_button {
+  font-size: 32px;
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#custom-os_button:hover {
+  background: white;
+  color: black;
+}

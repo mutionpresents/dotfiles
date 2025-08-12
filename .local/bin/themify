@@ -19,7 +19,7 @@ if [ -n "$SELECTED_WALL" ]; then
     # Extract just the filename without path (in case Wofi returns full path)
     WALLPAPER_FILE=$(basename "$SELECTED_WALL")
     themify-backend "$WALL_DIR/$WALLPAPER_FILE"
-	ln -sf ~/.cache/wal/colors-kitty.conf ~/.config/kitty/colors.conf
+#	ln -sf ~/.cache/wal/colors-kitty.conf ~/.config/kitty/colors.conf
 
 	#swww img "$WALL_DIR/$WALLPAPER_FILE" --transition-type wipe --transition-duration 1.0 --transition-step 2.0
 fi
