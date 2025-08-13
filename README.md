@@ -9,7 +9,7 @@ A complete Hyprland configuration setup with automated installation for multiple
 ## Quick Install
 
 ```bash
-https://github.com/mutionpresents/Hyprland.dotfiles
+git clone https://github.com/mutionpresents/Hyprland.dotfiles
 cd Hyprland.dotfiles
 chmod +x install.sh
 ./install.sh
