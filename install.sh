@@ -44,6 +44,12 @@ detect_distro() {
         DISTRO=$ID
         DISTRO_NAME=$NAME
         VERSION=$VERSION_ID
+        
+        # Handle Arch-based distributions
+        if [ "$ID_LIKE" = "arch" ] || [ "$ID" = "endeavouros" ] || [ "$ID" = "manjaro" ]; then
+            DISTRO="arch"
+            echo -e "${BLUE}   Detected Arch-based distribution: $NAME${NC}"
+        fi
     else
         echo -e "${RED}❌ Cannot detect distribution${NC}"
         exit 1
@@ -51,6 +57,7 @@ detect_distro() {
     
     echo -e "${GREEN}✅ Detected: $DISTRO_NAME${NC}"
     echo -e "${BLUE}   Version: $VERSION${NC}"
+    echo -e "${BLUE}   Base: $DISTRO${NC}"
     
     # Check if Wayland is available
     if [ -n "$WAYLAND_DISPLAY" ] || [ -n "$XDG_SESSION_TYPE" ] && [ "$XDG_SESSION_TYPE" = "wayland" ]; then
@@ -97,7 +104,22 @@ install_packages() {
     
     case $DISTRO in
         arch)
-            echo -e "${BLUE}Installing Arch packages...${NC}"
+            echo -e "${BLUE}Installing Arch/Arch-based packages...${NC}"
+            
+            # Detect specific Arch-based distribution features
+            if [ "$ID" = "endeavouros" ]; then
+                echo -e "${GREEN}EndeavourOS detected - using optimized package installation${NC}"
+                # EndeavourOS comes with yay pre-installed usually
+                if ! command -v yay &> /dev/null && ! command -v paru &> /dev/null; then
+                    echo -e "${YELLOW}Installing yay AUR helper...${NC}"
+                    sudo pacman -S --needed base-devel git
+                    git clone https://aur.archlinux.org/yay.git /tmp/yay
+                    cd /tmp/yay && makepkg -si --noconfirm
+                    cd - > /dev/null
+                fi
+            elif [ "$ID" = "manjaro" ]; then
+                echo -e "${GREEN}Manjaro detected - using pamac/pacman${NC}"
+            fi
             
             # Check for AUR helper
             if command -v paru &> /dev/null; then
@@ -117,6 +139,15 @@ install_packages() {
                 if [ -f "$PACKAGES_DIR/arch-aur-packages.txt" ]; then
                     echo -e "${BLUE}Installing AUR packages...${NC}"
                     yay -S --needed --noconfirm - < "$PACKAGES_DIR/arch-aur-packages.txt"
+                fi
+            elif command -v pamac &> /dev/null && [ "$ID" = "manjaro" ]; then
+                echo -e "${GREEN}Using pamac for Manjaro package installation${NC}"
+                if [ -f "$PACKAGES_DIR/arch-packages.txt" ]; then
+                    pamac install --no-confirm - < "$PACKAGES_DIR/arch-packages.txt"
+                fi
+                if [ -f "$PACKAGES_DIR/arch-aur-packages.txt" ]; then
+                    echo -e "${BLUE}Installing AUR packages with pamac...${NC}"
+                    pamac build --no-confirm - < "$PACKAGES_DIR/arch-aur-packages.txt"
                 fi
             else
                 echo -e "${YELLOW}No AUR helper found, using pacman only${NC}"
@@ -159,7 +190,24 @@ install_packages() {
             ;;
         
         *)
-            echo -e "${YELLOW}⚠️  Unsupported distribution: $DISTRO${NC}"
+            echo -e "${YELLOW}⚠️  Unsupported distribution: $DISTRO_NAME${NC}"
+            echo -e "${BLUE}Detected base: $DISTRO${NC}"
+            
+            # Try to handle unknown Arch-based distributions
+            if [ "$ID_LIKE" = "arch" ] || command -v pacman &> /dev/null; then
+                echo -e "${YELLOW}This appears to be an Arch-based distribution. Attempting Arch installation...${NC}"
+                read -p "Continue with Arch-based installation? (y/N): " -n 1 -r
+                echo
+                if [[ $REPLY =~ ^[Yy]$ ]]; then
+                    DISTRO="arch"
+                    # Re-run arch installation
+                    if [ -f "$PACKAGES_DIR/arch-packages.txt" ]; then
+                        sudo pacman -S --needed --noconfirm - < "$PACKAGES_DIR/arch-packages.txt"
+                    fi
+                    return
+                fi
+            fi
+            
             echo -e "${YELLOW}Please install packages manually from:${NC}"
             if [ -f "$PACKAGES_DIR/base-packages.txt" ]; then
                 echo -e "${BLUE}Base packages needed:${NC}"
@@ -416,6 +464,54 @@ post_install_setup() {
         echo -e "${GREEN}✅ Font cache updated${NC}"
     fi
     
+# Validate font installation
+validate_fonts() {
+    echo -e "${CYAN}🔍 Validating font installation...${NC}"
+    
+    local critical_fonts=(
+        "Font Awesome"
+        "Noto"
+    )
+    
+    local recommended_fonts=(
+        "JetBrains Mono"
+        "Fira Code"
+        "Hack"
+    )
+    
+    local missing_critical=()
+    local missing_recommended=()
+    
+    # Check critical fonts
+    for font in "${critical_fonts[@]}"; do
+        if ! fc-list | grep -qi "$font"; then
+            missing_critical+=("$font")
+        fi
+    done
+    
+    # Check recommended fonts  
+    for font in "${recommended_fonts[@]}"; do
+        if ! fc-list | grep -qi "$font"; then
+            missing_recommended+=("$font")
+        fi
+    done
+    
+    # Report results
+    if [ ${#missing_critical[@]} -ne 0 ]; then
+        echo -e "${RED}❌ Missing critical fonts: ${missing_critical[*]}${NC}"
+        echo -e "${YELLOW}These fonts are required for proper display. Install them manually if needed.${NC}"
+    fi
+    
+    if [ ${#missing_recommended[@]} -ne 0 ]; then
+        echo -e "${YELLOW}⚠️  Missing recommended fonts: ${missing_recommended[*]}${NC}"
+        echo -e "${BLUE}These fonts will improve the visual experience but aren't critical.${NC}"
+    fi
+    
+    if [ ${#missing_critical[@]} -eq 0 ] && [ ${#missing_recommended[@]} -eq 0 ]; then
+        echo -e "${GREEN}✅ All recommended fonts are installed${NC}"
+    fi
+}
+    
     # Update XDG database
     if command -v update-desktop-database &> /dev/null; then
         echo -e "${BLUE}Updating desktop database...${NC}"
@@ -428,11 +524,15 @@ post_install_setup() {
         update-mime-database "$HOME/.local/share/mime" 2>/dev/null || true
     fi
     
+    # Validate fonts
+    validate_fonts
+    
     # Source shell configuration
     echo -e "${BLUE}Reloading shell configuration...${NC}"
     if [ -f "$HOME/.bashrc" ]; then
         echo -e "${YELLOW}ℹ️  Please run 'source ~/.bashrc' or restart your shell${NC}"
     fi
+}
 }
 
 # Show completion message
