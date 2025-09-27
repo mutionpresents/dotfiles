@@ -12,7 +12,7 @@
     "logo": {
         "source": "~/.local/share/fastfetch/ascii/arch.txt",
         "width": 30,
-        "height": 15,
+        "height": 14,
         "padding": {
             "top": 3,
             "bottom": 3,

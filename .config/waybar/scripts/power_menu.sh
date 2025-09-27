@@ -4,7 +4,7 @@
 # Save this as ~/.config/waybar/scripts/power_menu.sh
 
 # Define options
-options="🔒 Lock\n💤 Sleep\n🔄 Restart\n    Shutdown"
+options=" Lock\n󰤄 Sleep\n Restart\n Shutdown"
 
 # Show menu with rofi
 choice=$(echo -e "$options" | rofi -dmenu \
@@ -15,16 +15,16 @@ choice=$(echo -e "$options" | rofi -dmenu \
 
 # Execute based on choice
 case $choice in
-    "🔒 Lock")
+    " Lock")
         hyprlock
         ;;
-    "💤 Sleep")
+    "󰤄 Sleep")
         systemctl suspend
         ;;
-    "🔄 Restart")
+    " Restart")
         systemctl reboot
         ;;
-    "    Shutdown")
+    " Shutdown")
         systemctl poweroff
         ;;
 esac

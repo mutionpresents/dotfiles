@@ -29,9 +29,9 @@ replayGainCheckFirst=0
 # Save Repeat and Shuffle Settings.
 saveRepeatShuffleSettings=1
 
-repeatState=2
+repeatState=0
 
-shuffleEnabled=0
+shuffleEnabled=1
 
 # Set the window title to the title of the currently playing track
 trackTitleAsWindowTitle=1

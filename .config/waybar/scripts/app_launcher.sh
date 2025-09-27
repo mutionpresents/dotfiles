@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rofi -show drun -show-icons -icon-theme Papirus -theme /usr/share/rofi/themes/launchpad.rasi -
+rofi -show drun -show-icons -icon-theme Papirus -theme
 run-command "uwsm app -- {cmd}"    

@@ -1,28 +1,52 @@
 #!/bin/bash
+
 # Directory containing wallpapers
 WALL_DIR="$HOME/Pictures/Wallpapers"
-
-# Current directory (to cd back to)
 CWD="$(pwd)"
 cd "$WALL_DIR" || exit
 
-# Handle spaces in filenames
 IFS=$'\n'
 
-# Grab the user-selected wallpaper with previews
-#SELECTED_WALL=$(for a in *.jpg *.png; do echo -e "$a\x1ficon\x1f$WALL_DIR/$a" done | wofi --dmenu --prompt "Choose a wallpaper" --show dmenu)
-#SELECTED_WALL=$(for a in *.jpg *.png; do echo -en "$a\0icon\x1f$a\n"; done | rofi -dmenu -p "Choose a wallpaper" --show dmenu)
-SELECTED_WALL=$(for a in *.jpg *.png; do echo -en "$a\x00icon\x1f$WALL_DIR/$a\n"; done | rofi -dmenu -p "Choose a wallpaper" -show-icons)
+# Ask user to pick a wallpaper
+SELECTED_WALL=$(for a in *.jpg *.png; do
+    echo -en "$a\x00icon\x1f$WALL_DIR/$a\n"
+done | rofi -dmenu -p "Choose a wallpaper" -show-icons)
 
-# If not empty, pass to themify-backend
-if [ -n "$SELECTED_WALL" ]; then
-    # Extract just the filename without path (in case Wofi returns full path)
-    WALLPAPER_FILE=$(basename "$SELECTED_WALL")
-    themify-backend "$WALL_DIR/$WALLPAPER_FILE"
-#	ln -sf ~/.cache/wal/colors-kitty.conf ~/.config/kitty/colors.conf
+# If user cancels
+[ -z "$SELECTED_WALL" ] && exit
 
-	#swww img "$WALL_DIR/$WALLPAPER_FILE" --transition-type wipe --transition-duration 1.0 --transition-step 2.0
+# Extract the filename (Rofi returns full text, may include icon metadata)
+WALLPAPER_PATH="$WALL_DIR/$(basename "$SELECTED_WALL")"
+
+# Notify user
+notify-send "Changing Theme" "Applying wallpaper and updating colors..."
+
+# Set wallpaper via swww
+swww img "$WALLPAPER_PATH" --transition-type center --transition-fps 60
+
+# Generate colors with wallust
+if ! wallust run "$WALLPAPER_PATH"; then
+    notify-send "Wallust Failed" "Trying fallback..."
+    wallust run "$WALLPAPER_PATH" --backend thumb || {
+        notify-send "Error" "Could not generate colors from this image"
+        exit 1
+    }
 fi
 
-# Go back to where you came from
+# Reload kitty colors
+pkill -USR1 kitty 2>/dev/null
+
+# Reload Waybar and Swaync
+pkill waybar
+sleep 1
+waybar > /dev/null 2>&1 &
+
+pkill swaync
+sleep 1
+swaync > /dev/null 2>&1 &
+
+notify-send "Theme Applied" "Wallpaper and theme updated successfully!"
+
+# Return to original directory
 cd "$CWD" || exit
+

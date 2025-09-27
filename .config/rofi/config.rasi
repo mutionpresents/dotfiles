@@ -71,4 +71,14 @@
 
 //@theme "/usr/share/rofi/themes/rounded-gray-dark.rasi"
 
-@theme "/usr/share/rofi/themes/rounded-gray-dark.rasi"
+//@theme "/usr/share/rofi/themes/rounded-gray-dark.rasi"
+
+//@theme "/home/mution/.local/share/rofi/themes/rounded-gray-dark.rasi"
+
+//@theme "/home/mution/.local/share/rofi/themes/launchpad.rasi"
+
+//@theme "/home/mution/.local/share/rofi/themes/squared-material-red.rasi"
+
+//@theme "/home/mution/.local/share/rofi/themes/launchpad.rasi"
+
+@theme "/home/mution/.local/share/rofi/themes/squared-nord.rasi"

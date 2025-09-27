@@ -8,7 +8,7 @@
     "passthrough": false,
     "reload_style_on_change": true,
     "margin": "2 2px",
-    "modules-left": ["custom/launcher", "custom/themify", "hyprland/workspaces", "custom/media"],
+    "modules-left": ["custom/launcher", "hyprland/workspaces", "custom/media"],
     "modules-center": ["clock"],
     "modules-right": ["tray", "pulseaudio", "backlight", "cpu", "memory", "battery", "custom/power"],
 "right/tray": {
@@ -103,10 +103,14 @@
 },
 
     "clock": {
-      "timezone": "America/Los_Angeles",
-      "format": "󰃰  {:%a %d %b  %I:%M %p}",
-      "tooltip-format": "Date: {:%Y-%m-%d} Time: {:%I:%M %p}"
-    },
+      "timezone": "America/Chicago",
+      "format": "󰃰  {:%a %d %b %Y  %I:%M %p}",
+      "tooltip": false
+/*      tooltip-format: Date {:%Y-%m-%d} Time {:%I:%M %p}
+*/ 
+      /*"tooltip-format": "Date is {:%Y/%m/%d}, Time is {:%I:%M %p}."
+*/
+},
 
     "pulseaudio": {
       "format": "{icon}  {volume}%",
