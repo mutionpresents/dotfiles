@@ -3,7 +3,6 @@
 ;
 ; (gtk_accel_path "<Actions>/ThunarStandardView/sort-by-type" "")
 ; (gtk_accel_path "<Actions>/ThunarStatusBar/toggle-last-modified" "")
-; (gtk_accel_path "<Actions>/ThunarBookmarks/a0516f4c8083a8a13d4ccd571289b092" "")
 ; (gtk_accel_path "<Actions>/Thunarwindow/menu" "")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/cut" "<Primary>x")
 ; (gtk_accel_path "<Actions>/ThunarBookmarks/fbb93e4cbbf0e45eac07088e0887a9cb" "")
@@ -28,7 +27,6 @@
 ; (gtk_accel_path "<Actions>/ThunarActionManager/copy-2" "<Primary>Insert")
 ; (gtk_accel_path "<Actions>/ThunarBookmarks/36774125a51db394c69bff1a0e6bbc59" "")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/trash-delete" "Delete")
-; (gtk_accel_path "<Actions>/ThunarBookmarks/3eaaf6ac28b276983520a05dab2d9b4e" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-recent" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-configure-toolbar" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/forward" "<Alt>Right")

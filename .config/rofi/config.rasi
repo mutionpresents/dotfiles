@@ -81,4 +81,10 @@
 
 //@theme "/home/mution/.local/share/rofi/themes/launchpad.rasi"
 
-@theme "/home/mution/.local/share/rofi/themes/squared-nord.rasi"
+//@theme "/home/mution/.local/share/rofi/themes/squared-nord.rasi"
+
+//@theme "/home/mution/.local/share/rofi/themes/launchpad.rasi"
+
+//@theme "/home/mution/.local/share/rofi/themes/rounded-green-dark.rasi"
+
+@theme "/home/mution/.local/share/rofi/themes/squared-material-red.rasi"

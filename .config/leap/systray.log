@@ -1,0 +1,19 @@
+{"level":"info","logFile":"/home/mution/.config/leap/systray.log","hint":"you can change the log level with env LOG_LEVEL=INFO|DEBUG|TRACE","time":"2025-08-14T09:14:24-07:00","message":"Enabling logging"}
+{"level":"info","time":"2025-08-14T09:14:24-07:00","message":"Not autostarting OpenVPN"}
+{"level":"info","url":"https://downloads.leap.se/RiseupVPN/linux/lastver","time":"2025-08-14T09:14:27-07:00","message":"Checking for updates"}
+{"level":"info","updateAvailable":false,"time":"2025-08-14T09:14:27-07:00","message":"Sucessfully checked if there is an update"}
+{"level":"info","time":"2025-08-14T09:14:27-07:00","message":"Stopping firewall"}
+{"level":"info","time":"2025-08-14T09:14:28-07:00","message":"Using transport openvpn"}
+{"level":"info","transport":"openvpn","time":"2025-08-14T09:14:28-07:00","message":"Setting transport"}
+{"level":"info","time":"2025-08-14T09:14:28-07:00","message":"Enabled UDP"}
+{"level":"info","time":"2025-08-14T09:14:28-07:00","message":"Fetching gateways..."}
+{"level":"info","time":"2025-08-14T09:14:33-07:00","message":"Getting OpenVPN client certificate"}
+{"level":"warn","error":"Post \"https://api.black.riseup.net:9001/json\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)","time":"2025-08-14T09:15:58-07:00","message":"Could not fetch geolocation"}
+{"level":"warn","error":"Post \"https://api.black.riseup.net:9001/json\": dial tcp 198.252.153.67:9001: i/o timeout (Client.Timeout exceeded while awaiting headers)","time":"2025-08-14T09:16:04-07:00","message":"Could not fetch geolocation"}
+{"level":"warn","error":"Post \"https://api.black.riseup.net:9001/json\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)","time":"2025-08-14T09:17:34-07:00","message":"Could not fetch geolocation"}
+{"level":"info","time":"2025-08-14T09:17:34-07:00","message":"Got best gateway [{vpn16-sea.riseup.net 198.252.153.109 Seattle Seattle US [53 80 1194] [tcp udp] map[] openvpn} {vpn01-sea.riseup.net 204.13.164.252 Seattle Seattle US [53 80 1194] [tcp udp] map[] openvpn} {vpn15-sea.riseup.net 199.254.238.55 Seattle Seattle US [53 80 1194] [tcp udp] map[] openvpn}]"}
+{"level":"info","time":"2025-08-14T09:17:34-07:00","message":"Starting firewall"}
+{"level":"warn","error":"exit status 1","cmd":"/usr/sbin/bitmask-root firewall start 198.252.153.109 204.13.164.252 199.254.238.55","time":"2025-08-14T09:17:34-07:00","message":"Error running bitmask-root: \"bitmask-root: ERROR: Could not determine state of iptable chain\nbitmask-root: ERROR: Could not run ['/bin/iptables', '--new-chain', 'bitmask']: None\""}
+{"level":"warn","error":"exit status 1","time":"2025-08-14T09:17:34-07:00","message":"Could not start VPN"}
+{"level":"info","time":"2025-08-14T09:57:00-07:00","message":"Close: cleanup and vpn shutdown..."}
+{"level":"info","time":"2025-08-14T09:57:00-07:00","message":"Stopping firewall"}
