@@ -7,4 +7,5 @@
   <property name="last-show-hidden" type="bool" value="true"/>
   <property name="last-separator-position" type="int" value="170"/>
   <property name="last-renamer-dialog-maximized" type="bool" value="true"/>
+  <property name="last-location-bar" type="string" value="ThunarLocationButtons"/>
 </channel>

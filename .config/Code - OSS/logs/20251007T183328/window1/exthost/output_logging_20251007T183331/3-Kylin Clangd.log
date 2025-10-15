@@ -1,0 +1,64 @@
+I[18:33:34.041] clangd version 21.0.0git (https://github.com/llvm/llvm-project c6cec7bd9cef993b377903b88375e00badcbf11b)
+I[18:33:34.042] Features: linux
+I[18:33:34.042] PID: 3266
+I[18:33:34.042] Working directory: /home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]
+I[18:33:34.042] argv[0]: /home/mution/.vscode-oss/extensions/kylinideteam.kylin-clangd-0.4.0-linux-x64/res/clangd/bin/clangd
+I[18:33:34.042] argv[1]: --clang-tidy=1
+I[18:33:34.044] Starting LSP over stdin/stdout
+I[18:33:34.066] <-- initialize(0)
+I[18:33:34.073] --> reply:initialize(0) 6 ms
+I[18:33:34.087] <-- initialized
+I[18:33:34.111] <-- textDocument/didOpen
+I[18:33:34.115] --> textDocument/publishDiagnostics
+I[18:33:34.116] Failed to find compilation database for /home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]/Linearsearch.cpp
+I[18:33:34.116] ASTWorker building file /home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]/Linearsearch.cpp version 1 with command clangd fallback
+[/home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]]
+/usr/bin/clang -resource-dir=/home/mution/.vscode-oss/extensions/kylinideteam.kylin-clangd-0.4.0-linux-x64/res/clangd/lib/clang/21 -- "/home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]/Linearsearch.cpp"
+I[18:33:34.116] <-- textDocument/codeAction(1)
+I[18:33:34.128] --> textDocument/clangd.fileStatus
+I[18:33:34.129] <-- textDocument/documentLink(2)
+I[18:33:34.131] <-- textDocument/inlayHint(3)
+I[18:33:34.186] <-- $/cancelRequest
+I[18:33:34.189] <-- textDocument/codeAction(4)
+I[18:33:34.189] <-- $/cancelRequest
+I[18:33:34.189] <-- textDocument/codeAction(5)
+I[18:33:34.280] <-- $/setTrace
+I[18:33:34.280] unhandled notification $/setTrace
+I[18:33:34.354] <-- textDocument/foldingRange(6)
+I[18:33:34.355] --> reply:textDocument/foldingRange(6) 0 ms
+I[18:33:34.476] <-- textDocument/documentSymbol(7)
+I[18:33:34.538] <-- $/setTrace
+I[18:33:34.538] unhandled notification $/setTrace
+I[18:33:34.642] <-- $/cancelRequest
+I[18:33:34.643] <-- textDocument/inlayHint(8)
+I[18:33:34.660] <-- textDocument/semanticTokens/full(9)
+I[18:33:34.671] <-- textDocument/documentSymbol(10)
+I[18:33:34.858] Built preamble of size 3968932 for file /home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]/Linearsearch.cpp version 1 in 0.73 seconds
+I[18:33:34.859] --> workspace/semanticTokens/refresh(0)
+I[18:33:34.859] Indexing c++17 standard library in the context of /home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]/Linearsearch.cpp
+I[18:33:34.859] --> textDocument/clangd.fileStatus
+I[18:33:34.862] <-- reply(0)
+I[18:33:34.896] --> textDocument/publishDiagnostics
+I[18:33:34.896] --> textDocument/inactiveRegions
+I[18:33:34.896] --> reply:textDocument/codeAction(1) 780 ms, error: Task was cancelled.
+I[18:33:34.897] --> reply:textDocument/documentLink(2) 767 ms
+I[18:33:34.897] --> reply:textDocument/inlayHint(3) 765 ms, error: Task was cancelled.
+I[18:33:34.897] --> reply:textDocument/codeAction(4) 707 ms, error: Task was cancelled.
+I[18:33:34.898] --> reply:textDocument/codeAction(5) 708 ms
+I[18:33:34.898] --> reply:textDocument/documentSymbol(7) 421 ms
+I[18:33:34.898] --> reply:textDocument/inlayHint(8) 254 ms
+I[18:33:34.898] --> reply:textDocument/semanticTokens/full(9) 238 ms
+[Error - 6:33:34 PM] Request textDocument/codeAction failed.
+[object Object]
+I[18:33:34.898] --> reply:textDocument/documentSymbol(10) 227 ms
+I[18:33:34.898] --> textDocument/clangd.fileStatus
+[Error - 6:33:34 PM] Request textDocument/inlayHint failed.
+[object Object]
+[Error - 6:33:34 PM] Request textDocument/codeAction failed.
+[object Object]
+I[18:33:35.273] <-- textDocument/semanticTokens/full/delta(11)
+I[18:33:35.274] --> reply:textDocument/semanticTokens/full/delta(11) 0 ms
+I[18:33:35.274] --> textDocument/clangd.fileStatus
+I[18:33:38.120] Indexed c++17 standard library (incomplete due to errors): 14392 symbols, 11464 filtered
+I[18:33:41.888] <-- textDocument/didClose
+I[18:33:41.888] --> textDocument/publishDiagnostics

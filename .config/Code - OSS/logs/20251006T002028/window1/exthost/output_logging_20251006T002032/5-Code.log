@@ -1,0 +1,2 @@
+[Running] cd "/home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]/" && g++ Linearsearch.cpp -o Linearsearch && "/home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]/"Linearsearch
+Enter a number you want to search for in the array (1 to 5): 

@@ -1,0 +1,7 @@
+2025-10-07 18:33:35.310 [info] Getting Manifest... redhat.vscode-yaml
+2025-10-07 18:33:36.709 [info] Installing extension: redhat.vscode-yaml {"productVersion":{"version":"1.104.0","date":"2025-09-11T17:25:18.526Z"},"pinned":false,"operation":3,"isApplicationScoped":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/mution/.vscode-oss/extensions/extensions.json","path":"/home/mution/.vscode-oss/extensions/extensions.json","scheme":"vscode-userdata"}}
+2025-10-07 18:33:38.599 [info] Extension signature verification result for redhat.vscode-yaml: Success. Executed: true. Duration: 281ms.
+2025-10-07 18:33:38.780 [info] Extracted extension to file:///home/mution/.vscode-oss/extensions/redhat.vscode-yaml-1.19.1-universal: redhat.vscode-yaml
+2025-10-07 18:33:38.798 [info] Renamed to /home/mution/.vscode-oss/extensions/redhat.vscode-yaml-1.19.1-universal
+2025-10-07 18:33:38.819 [info] Marked extension as removed redhat.vscode-yaml-1.19.0-universal
+2025-10-07 18:33:38.835 [info] Extension installed successfully: redhat.vscode-yaml vscode-userdata:/home/mution/.vscode-oss/extensions/extensions.json

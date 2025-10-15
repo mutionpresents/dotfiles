@@ -1,0 +1,37 @@
+// Jeremiah Park
+// CSCI 230
+// 07 October 2025
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main() {
+  // Define a string with 5 names.
+  vector<string> names = {"Tom", "Omar", "Mary", "Mickey", "Donald"};
+
+  // Ask user for 5 other names to be added to the vector
+  // via for loop
+  for (int i = 0; i <= 4; i++) {
+    // string variable to store the new names
+    string updatedName;
+    cout << "Enter the #" << (i + 1) << " name to add to the list: ";
+    cin >> updatedName;
+
+    // Insert the names to the end of the vector using the
+    // insert function
+    names.insert(names.end(), updatedName);
+  }
+
+  // To seperate the output of the input loop of new names
+  // And the output loop of the updated names list
+  cout << endl << "Updated name list:" << endl;
+
+  // Display the string vector elements (updated name list).
+  for (auto name : names) {
+    cout << name << " " << endl;
+  }
+  cout << endl;
+
+  return 0;
+}

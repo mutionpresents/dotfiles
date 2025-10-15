@@ -1,21 +1,21 @@
 /* Basic wallust colors */
-@define-color background #363431;
-@define-color foreground #B3AEB1;
-@define-color background-alt #343332;
-@define-color primary #D74671;
+@define-color background #1A0A09;
+@define-color foreground #C5B2B1;
+@define-color background-alt #30332B;
+@define-color primary #B55724;
 
 /* Material Design 3 color mappings */
-@define-color surface_container_low #343332;
-@define-color surface_container #343332;
-@define-color surface_container_high #562640;
-@define-color outline_variant #8A8386;
-@define-color error #D74671;
-@define-color on_error #363431;
-@define-color surface #363431;
-@define-color on_surface #B3AEB1;
-@define-color primary_container #D74671;
-@define-color on_primary #363431;
-@define-color secondary #367F82;
-@define-color secondary_container #367F82;
-@define-color tertiary #B58A52;
-@define-color border_color #562640;
+@define-color surface_container_low #30332B;
+@define-color surface_container #30332B;
+@define-color surface_container_high #7E2C29;
+@define-color outline_variant #A38887;
+@define-color error #B55724;
+@define-color on_error #1A0A09;
+@define-color surface #1A0A09;
+@define-color on_surface #C5B2B1;
+@define-color primary_container #B55724;
+@define-color on_primary #1A0A09;
+@define-color secondary #8C6234;
+@define-color secondary_container #8C6234;
+@define-color tertiary #7FB541;
+@define-color border_color #7E2C29;

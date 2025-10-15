@@ -1,0 +1,79 @@
+I[00:08:46.743] clangd version 21.0.0git (https://github.com/llvm/llvm-project c6cec7bd9cef993b377903b88375e00badcbf11b)
+I[00:08:46.744] Features: linux
+I[00:08:46.744] PID: 12528
+I[00:08:46.744] Working directory: /home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]
+I[00:08:46.744] argv[0]: /home/mution/.vscode-oss/extensions/kylinideteam.kylin-clangd-0.4.0-linux-x64/res/clangd/bin/clangd
+I[00:08:46.744] argv[1]: --clang-tidy=1
+I[00:08:46.746] Starting LSP over stdin/stdout
+I[00:08:46.769] <-- initialize(0)
+I[00:08:46.778] --> reply:initialize(0) 9 ms
+I[00:08:46.802] <-- initialized
+I[00:14:18.609] <-- textDocument/didOpen
+I[00:14:18.622] <-- textDocument/didChange
+I[00:14:18.623] --> textDocument/publishDiagnostics
+I[00:14:18.623] Failed to find compilation database for /home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]/Linear Search.cpp
+I[00:14:18.624] ASTWorker building file /home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]/Linear Search.cpp version 1 with command clangd fallback
+[/home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]]
+/usr/bin/clang -resource-dir=/home/mution/.vscode-oss/extensions/kylinideteam.kylin-clangd-0.4.0-linux-x64/res/clangd/lib/clang/21 -- "/home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]/Linear Search.cpp"
+I[00:14:18.640] --> textDocument/clangd.fileStatus
+I[00:14:18.692] Built preamble of size 268884 for file /home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]/Linear Search.cpp version 1 in 0.05 seconds
+I[00:14:18.694] --> workspace/semanticTokens/refresh(0)
+I[00:14:18.694] --> textDocument/clangd.fileStatus
+I[00:14:18.699] <-- reply(0)
+I[00:14:18.700] Indexing c++17 standard library in the context of /home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]/Linear Search.cpp
+I[00:14:18.730] <-- textDocument/didSave
+I[00:14:18.730] File version went from 2 to 2
+I[00:14:18.738] --> textDocument/publishDiagnostics
+I[00:14:18.738] --> textDocument/inactiveRegions
+I[00:14:18.739] --> textDocument/clangd.fileStatus
+I[00:14:18.780] Failed to find compilation database for /home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]/Linear Search.cpp
+I[00:14:18.780] ASTWorker building file /home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]/Linear Search.cpp version 2 with command clangd fallback
+[/home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]]
+/usr/bin/clang -resource-dir=/home/mution/.vscode-oss/extensions/kylinideteam.kylin-clangd-0.4.0-linux-x64/res/clangd/lib/clang/21 -- "/home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]/Linear Search.cpp"
+I[00:14:18.781] --> textDocument/clangd.fileStatus
+I[00:14:18.881] <-- textDocument/documentSymbol(1)
+I[00:14:19.090] <-- textDocument/inlayHint(2)
+I[00:14:19.091] <-- textDocument/documentLink(3)
+I[00:14:19.126] <-- textDocument/codeAction(4)
+I[00:14:19.336] <-- textDocument/documentSymbol(5)
+I[00:14:19.373] <-- textDocument/semanticTokens/full(6)
+I[00:14:19.390] <-- textDocument/foldingRange(7)
+I[00:14:19.390] --> reply:textDocument/foldingRange(7) 0 ms
+I[00:14:19.411] <-- textDocument/hover(8)
+I[00:14:19.544] Built preamble of size 3968932 for file /home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]/Linear Search.cpp version 2 in 0.76 seconds
+I[00:14:19.544] --> workspace/semanticTokens/refresh(1)
+I[00:14:19.545] <-- reply(1)
+I[00:14:19.627] --> textDocument/publishDiagnostics
+I[00:14:19.627] --> textDocument/inactiveRegions
+I[00:14:19.653] --> textDocument/publishDiagnostics
+I[00:14:19.653] --> textDocument/inactiveRegions
+I[00:14:19.653] --> reply:textDocument/documentSymbol(1) 772 ms
+I[00:14:19.653] --> reply:textDocument/inlayHint(2) 563 ms
+I[00:14:19.654] --> reply:textDocument/documentLink(3) 562 ms
+I[00:14:19.654] --> reply:textDocument/codeAction(4) 528 ms
+I[00:14:19.654] --> reply:textDocument/documentSymbol(5) 318 ms
+I[00:14:19.654] --> reply:textDocument/semanticTokens/full(6) 281 ms
+I[00:14:19.655] --> reply:textDocument/hover(8) 243 ms
+I[00:14:19.655] --> textDocument/clangd.fileStatus
+I[00:14:19.908] <-- textDocument/codeAction(9)
+I[00:14:19.909] --> reply:textDocument/codeAction(9) 0 ms
+I[00:14:19.909] --> textDocument/clangd.fileStatus
+I[00:14:19.991] <-- textDocument/semanticTokens/full/delta(10)
+I[00:14:19.991] --> reply:textDocument/semanticTokens/full/delta(10) 0 ms
+I[00:14:19.991] --> textDocument/clangd.fileStatus
+I[00:14:22.071] <-- textDocument/inlayHint(11)
+I[00:14:22.071] --> reply:textDocument/inlayHint(11) 0 ms
+I[00:14:22.071] --> textDocument/clangd.fileStatus
+I[00:14:22.586] Indexed c++17 standard library (incomplete due to errors): 14392 symbols, 11464 filtered
+I[00:14:27.413] <-- textDocument/inlayHint(12)
+I[00:14:27.414] --> reply:textDocument/inlayHint(12) 0 ms
+I[00:14:27.414] --> textDocument/clangd.fileStatus
+I[00:14:28.706] <-- textDocument/inlayHint(13)
+I[00:14:28.706] --> reply:textDocument/inlayHint(13) 0 ms
+I[00:14:28.706] --> textDocument/clangd.fileStatus
+I[00:14:29.418] <-- textDocument/inlayHint(14)
+I[00:14:29.418] --> reply:textDocument/inlayHint(14) 0 ms
+I[00:14:29.419] --> textDocument/clangd.fileStatus
+I[00:14:29.990] <-- textDocument/inlayHint(15)
+I[00:14:29.990] --> reply:textDocument/inlayHint(15) 0 ms
+I[00:14:29.990] --> textDocument/clangd.fileStatus

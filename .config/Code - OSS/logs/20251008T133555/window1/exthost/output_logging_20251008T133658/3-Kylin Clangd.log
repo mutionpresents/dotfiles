@@ -1,0 +1,186 @@
+I[13:36:59.809] clangd version 21.0.0git (https://github.com/llvm/llvm-project c6cec7bd9cef993b377903b88375e00badcbf11b)
+I[13:36:59.810] Features: linux
+I[13:36:59.810] PID: 9641
+I[13:36:59.810] Working directory: /home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 6/ParkJProject230Assign06-5
+I[13:36:59.810] argv[0]: /home/mution/.vscode-oss/extensions/kylinideteam.kylin-clangd-0.4.0-linux-x64/res/clangd/bin/clangd
+I[13:36:59.810] argv[1]: --clang-tidy=1
+I[13:36:59.810] Starting LSP over stdin/stdout
+I[13:36:59.814] <-- initialize(0)
+I[13:36:59.815] --> reply:initialize(0) 0 ms
+I[13:36:59.825] <-- initialized
+I[13:36:59.875] <-- textDocument/didOpen
+I[13:36:59.875] --> textDocument/publishDiagnostics
+I[13:36:59.875] Failed to find compilation database for /home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 6/ParkJProject230Assign06-5/ParkJSource230Assign06-5.cpp
+I[13:36:59.875] ASTWorker building file /home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 6/ParkJProject230Assign06-5/ParkJSource230Assign06-5.cpp version 1 with command clangd fallback
+[/home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 6/ParkJProject230Assign06-5]
+/usr/bin/clang -resource-dir=/home/mution/.vscode-oss/extensions/kylinideteam.kylin-clangd-0.4.0-linux-x64/res/clangd/lib/clang/21 -- "/home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 6/ParkJProject230Assign06-5/ParkJSource230Assign06-5.cpp"
+I[13:36:59.876] --> textDocument/clangd.fileStatus
+I[13:36:59.885] <-- textDocument/codeAction(1)
+I[13:36:59.885] <-- textDocument/documentLink(2)
+I[13:36:59.886] <-- textDocument/inlayHint(3)
+I[13:37:00.034] <-- textDocument/foldingRange(4)
+I[13:37:00.035] --> reply:textDocument/foldingRange(4) 0 ms
+I[13:37:00.131] <-- textDocument/documentSymbol(5)
+I[13:37:00.195] Built preamble of size 4160704 for file /home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 6/ParkJProject230Assign06-5/ParkJSource230Assign06-5.cpp version 1 in 0.32 seconds
+I[13:37:00.196] --> workspace/semanticTokens/refresh(0)
+I[13:37:00.196] Indexing c++17 standard library in the context of /home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 6/ParkJProject230Assign06-5/ParkJSource230Assign06-5.cpp
+I[13:37:00.197] <-- reply(0)
+I[13:37:00.198] <-- textDocument/semanticTokens/full(6)
+I[13:37:00.230] --> textDocument/publishDiagnostics
+I[13:37:00.230] --> textDocument/inactiveRegions
+I[13:37:00.230] --> reply:textDocument/codeAction(1) 344 ms
+I[13:37:00.230] --> reply:textDocument/documentLink(2) 344 ms
+I[13:37:00.230] --> reply:textDocument/inlayHint(3) 344 ms
+I[13:37:00.230] --> reply:textDocument/documentSymbol(5) 99 ms
+I[13:37:00.231] --> reply:textDocument/semanticTokens/full(6) 32 ms
+I[13:37:00.231] --> textDocument/clangd.fileStatus
+I[13:37:00.324] <-- $/setTrace
+I[13:37:00.324] unhandled notification $/setTrace
+I[13:37:00.342] <-- textDocument/documentSymbol(7)
+I[13:37:00.342] --> reply:textDocument/documentSymbol(7) 0 ms
+I[13:37:00.342] --> textDocument/clangd.fileStatus
+I[13:37:00.353] <-- textDocument/inlayHint(8)
+I[13:37:00.353] --> reply:textDocument/inlayHint(8) 0 ms
+I[13:37:00.353] --> textDocument/clangd.fileStatus
+I[13:37:00.625] <-- textDocument/didOpen
+I[13:37:00.625] Failed to find compilation database for /home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 6/ParkJProject230Assign06-5/Program 17-5.cpp
+I[13:37:00.625] ASTWorker building file /home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 6/ParkJProject230Assign06-5/Program 17-5.cpp version 1 with command clangd fallback
+[/home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 6/ParkJProject230Assign06-5]
+/usr/bin/clang -resource-dir=/home/mution/.vscode-oss/extensions/kylinideteam.kylin-clangd-0.4.0-linux-x64/res/clangd/lib/clang/21 -- "/home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 6/ParkJProject230Assign06-5/Program 17-5.cpp"
+I[13:37:00.626] --> textDocument/clangd.fileStatus
+I[13:37:00.637] <-- textDocument/codeAction(9)
+I[13:37:00.637] <-- textDocument/documentSymbol(10)
+I[13:37:00.657] <-- textDocument/semanticTokens/full(11)
+I[13:37:00.659] <-- textDocument/inlayHint(12)
+I[13:37:00.660] <-- textDocument/documentLink(13)
+I[13:37:00.828] <-- textDocument/foldingRange(14)
+I[13:37:00.828] --> reply:textDocument/foldingRange(14) 0 ms
+I[13:37:00.910] <-- textDocument/codeAction(15)
+I[13:37:00.914] <-- $/cancelRequest
+I[13:37:00.994] <-- textDocument/documentSymbol(16)
+I[13:37:01.086] Built preamble of size 4160588 for file /home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 6/ParkJProject230Assign06-5/Program 17-5.cpp version 1 in 0.46 seconds
+I[13:37:01.086] --> workspace/semanticTokens/refresh(1)
+I[13:37:01.086] --> textDocument/clangd.fileStatus
+I[13:37:01.087] <-- reply(1)
+I[13:37:01.109] --> textDocument/publishDiagnostics
+I[13:37:01.109] --> textDocument/inactiveRegions
+I[13:37:01.109] --> reply:textDocument/codeAction(9) 472 ms, error: Task was cancelled.
+I[13:37:01.109] --> reply:textDocument/documentSymbol(10) 472 ms
+I[13:37:01.109] --> reply:textDocument/semanticTokens/full(11) 452 ms
+I[13:37:01.109] --> reply:textDocument/inlayHint(12) 450 ms
+I[13:37:01.110] --> reply:textDocument/documentLink(13) 449 ms
+I[13:37:01.110] --> reply:textDocument/codeAction(15) 199 ms
+I[13:37:01.110] --> reply:textDocument/documentSymbol(16) 115 ms
+I[13:37:01.110] --> textDocument/clangd.fileStatus
+[Error - 1:37:01 PM] Request textDocument/codeAction failed.
+[object Object]
+I[13:37:01.617] <-- textDocument/semanticTokens/full/delta(17)
+I[13:37:01.617] --> reply:textDocument/semanticTokens/full/delta(17) 0 ms
+I[13:37:01.618] --> textDocument/clangd.fileStatus
+I[13:37:02.904] Indexed c++17 standard library (incomplete due to errors): 14392 symbols, 11464 filtered
+I[13:37:05.384] <-- textDocument/inlayHint(18)
+I[13:37:05.386] --> reply:textDocument/inlayHint(18) 1 ms
+I[13:37:05.386] --> textDocument/clangd.fileStatus
+I[13:37:05.872] <-- textDocument/inlayHint(19)
+I[13:37:05.872] --> reply:textDocument/inlayHint(19) 0 ms
+I[13:37:05.872] --> textDocument/clangd.fileStatus
+I[13:37:06.155] <-- textDocument/inlayHint(20)
+I[13:37:06.155] --> reply:textDocument/inlayHint(20) 0 ms
+I[13:37:06.155] --> textDocument/clangd.fileStatus
+I[13:37:06.576] <-- textDocument/hover(21)
+I[13:37:06.577] --> reply:textDocument/hover(21) 0 ms
+I[13:37:06.577] --> textDocument/clangd.fileStatus
+I[13:37:06.909] <-- textDocument/hover(22)
+I[13:37:06.909] --> reply:textDocument/hover(22) 0 ms
+I[13:37:06.910] --> textDocument/clangd.fileStatus
+I[13:37:07.596] <-- textDocument/inlayHint(23)
+I[13:37:07.596] --> reply:textDocument/inlayHint(23) 0 ms
+I[13:37:07.596] --> textDocument/clangd.fileStatus
+I[13:37:07.745] <-- textDocument/inlayHint(24)
+I[13:37:07.746] --> reply:textDocument/inlayHint(24) 0 ms
+I[13:37:07.746] --> textDocument/clangd.fileStatus
+I[13:37:08.287] <-- textDocument/inlayHint(25)
+I[13:37:08.288] --> reply:textDocument/inlayHint(25) 0 ms
+I[13:37:08.288] --> textDocument/clangd.fileStatus
+I[13:37:08.554] <-- textDocument/inlayHint(26)
+I[13:37:08.554] --> reply:textDocument/inlayHint(26) 0 ms
+I[13:37:08.554] --> textDocument/clangd.fileStatus
+I[13:37:08.629] <-- textDocument/inlayHint(27)
+I[13:37:08.630] --> reply:textDocument/inlayHint(27) 0 ms
+I[13:37:08.630] --> textDocument/clangd.fileStatus
+I[13:37:09.804] <-- textDocument/codeAction(28)
+I[13:37:09.804] --> reply:textDocument/codeAction(28) 0 ms
+I[13:37:09.804] --> textDocument/clangd.fileStatus
+I[13:37:09.830] <-- textDocument/documentLink(29)
+I[13:37:09.830] --> reply:textDocument/documentLink(29) 0 ms
+I[13:37:09.830] --> textDocument/clangd.fileStatus
+I[13:37:09.996] <-- textDocument/foldingRange(30)
+I[13:37:09.997] --> reply:textDocument/foldingRange(30) 1 ms
+I[13:37:10.032] <-- textDocument/inlayHint(31)
+I[13:37:10.032] --> reply:textDocument/inlayHint(31) 0 ms
+I[13:37:10.033] --> textDocument/clangd.fileStatus
+I[13:37:10.056] <-- textDocument/codeAction(32)
+I[13:37:10.057] --> reply:textDocument/codeAction(32) 0 ms
+I[13:37:10.057] --> textDocument/clangd.fileStatus
+I[13:37:10.093] <-- textDocument/semanticTokens/full/delta(33)
+I[13:37:10.093] --> reply:textDocument/semanticTokens/full/delta(33) 0 ms
+I[13:37:10.093] --> textDocument/clangd.fileStatus
+I[13:37:10.101] <-- textDocument/documentSymbol(34)
+I[13:37:10.101] --> reply:textDocument/documentSymbol(34) 0 ms
+I[13:37:10.102] --> textDocument/clangd.fileStatus
+I[13:37:10.650] <-- textDocument/hover(35)
+I[13:37:10.651] --> reply:textDocument/hover(35) 1 ms
+I[13:37:10.651] --> textDocument/clangd.fileStatus
+I[13:37:11.270] <-- textDocument/inlayHint(36)
+I[13:37:11.271] --> reply:textDocument/inlayHint(36) 0 ms
+I[13:37:11.271] --> textDocument/clangd.fileStatus
+I[13:37:11.432] <-- textDocument/inlayHint(37)
+I[13:37:11.433] --> reply:textDocument/inlayHint(37) 0 ms
+I[13:37:11.433] --> textDocument/clangd.fileStatus
+I[13:37:11.966] <-- textDocument/inlayHint(38)
+I[13:37:11.966] --> reply:textDocument/inlayHint(38) 0 ms
+I[13:37:11.967] --> textDocument/clangd.fileStatus
+I[13:37:12.255] <-- textDocument/inlayHint(39)
+I[13:37:12.256] --> reply:textDocument/inlayHint(39) 0 ms
+I[13:37:12.256] --> textDocument/clangd.fileStatus
+I[13:37:12.586] <-- textDocument/hover(40)
+I[13:37:12.587] --> reply:textDocument/hover(40) 0 ms
+I[13:37:12.587] --> textDocument/clangd.fileStatus
+I[13:37:13.530] <-- textDocument/didOpen
+I[13:37:13.530] Failed to find compilation database for /home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 6/ParkJProject230Assign06-5/[Rough Draft] ParkJSource230Assign06-5.cpp
+I[13:37:13.530] ASTWorker building file /home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 6/ParkJProject230Assign06-5/[Rough Draft] ParkJSource230Assign06-5.cpp version 1 with command clangd fallback
+[/home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 6/ParkJProject230Assign06-5]
+/usr/bin/clang -resource-dir=/home/mution/.vscode-oss/extensions/kylinideteam.kylin-clangd-0.4.0-linux-x64/res/clangd/lib/clang/21 -- "/home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 6/ParkJProject230Assign06-5/[Rough Draft] ParkJSource230Assign06-5.cpp"
+I[13:37:13.532] --> textDocument/clangd.fileStatus
+I[13:37:13.540] <-- textDocument/codeAction(41)
+I[13:37:13.540] <-- textDocument/documentSymbol(42)
+I[13:37:13.561] <-- textDocument/semanticTokens/full(43)
+I[13:37:13.583] <-- textDocument/documentLink(44)
+I[13:37:13.588] <-- textDocument/inlayHint(45)
+I[13:37:13.735] <-- textDocument/foldingRange(46)
+I[13:37:13.736] --> reply:textDocument/foldingRange(46) 0 ms
+I[13:37:13.793] <-- $/cancelRequest
+I[13:37:13.835] <-- textDocument/documentSymbol(47)
+I[13:37:13.893] Built preamble of size 4160748 for file /home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 6/ParkJProject230Assign06-5/[Rough Draft] ParkJSource230Assign06-5.cpp version 1 in 0.36 seconds
+I[13:37:13.893] --> workspace/semanticTokens/refresh(2)
+I[13:37:13.894] <-- reply(2)
+I[13:37:13.913] --> textDocument/publishDiagnostics
+I[13:37:13.913] --> textDocument/inactiveRegions
+I[13:37:13.913] --> reply:textDocument/codeAction(41) 373 ms, error: Task was cancelled.
+I[13:37:13.913] --> reply:textDocument/documentSymbol(42) 373 ms
+I[13:37:13.914] --> reply:textDocument/semanticTokens/full(43) 352 ms
+I[13:37:13.914] --> reply:textDocument/documentLink(44) 330 ms
+I[13:37:13.914] --> reply:textDocument/inlayHint(45) 325 ms
+I[13:37:13.914] --> reply:textDocument/documentSymbol(47) 78 ms
+I[13:37:13.914] --> textDocument/clangd.fileStatus
+[Error - 1:37:13 PM] Request textDocument/codeAction failed.
+[object Object]
+I[13:37:14.002] <-- textDocument/hover(48)
+I[13:37:14.013] --> reply:textDocument/hover(48) 10 ms
+I[13:37:14.013] --> textDocument/clangd.fileStatus
+I[13:37:14.276] <-- textDocument/semanticTokens/full/delta(49)
+I[13:37:14.277] --> reply:textDocument/semanticTokens/full/delta(49) 0 ms
+I[13:37:14.277] --> textDocument/clangd.fileStatus
+I[13:37:14.698] <-- textDocument/inlayHint(50)
+I[13:37:14.698] --> reply:textDocument/inlayHint(50) 0 ms
+I[13:37:14.698] --> textDocument/clangd.fileStatus

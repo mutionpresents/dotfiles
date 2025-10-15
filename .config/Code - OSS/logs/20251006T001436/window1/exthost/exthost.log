@@ -1,0 +1,89 @@
+2025-10-06 00:14:39.705 [info] Extension host with pid 12785 started
+2025-10-06 00:14:39.705 [info] Skipping acquiring lock for /home/mution/.config/Code - OSS/User/workspaceStorage/74f20b5cf61fc6443644f6d0c92fc9f1.
+2025-10-06 00:14:40.570 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-10-06 00:14:40.629 [info] ExtensionService#_doActivateExtension vadimcn.vscode-lldb, startup: false, activationEvent: 'onLanguage:cpp', root cause: franneck94.c-cpp-runner
+2025-10-06 00:14:40.665 [info] ExtensionService#_doActivateExtension KylinIdeTeam.cppdebug, startup: false, activationEvent: 'onLanguage:cpp'
+2025-10-06 00:14:40.685 [info] ExtensionService#_doActivateExtension KylinIdeTeam.kylin-clangd, startup: false, activationEvent: 'onLanguage:cpp'
+2025-10-06 00:14:40.977 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-10-06 00:14:41.038 [info] ExtensionService#_doActivateExtension franneck94.c-cpp-runner, startup: false, activationEvent: 'onLanguage:cpp'
+2025-10-06 00:14:41.054 [info] ExtensionService#_doActivateExtension KylinIdeTeam.kylin-cmake-tools, startup: false, activationEvent: 'api', root cause: KylinIdeTeam.kylin-clangd
+2025-10-06 00:14:41.483 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-10-06 00:14:41.601 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-10-06 00:14:41.907 [info] Eager extensions activated
+2025-10-06 00:14:41.950 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-10-06 00:14:41.956 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-10-06 00:14:42.012 [info] ExtensionService#_doActivateExtension formulahendry.code-runner, startup: false, activationEvent: 'onStartupFinished'
+2025-10-06 00:14:43.792 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:14:43.792 [error] {"a":true,"b":null}
+2025-10-06 00:15:24.633 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:15:24.633 [error] {"a":true,"b":null}
+2025-10-06 00:15:42.181 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:15:42.181 [error] {"a":true,"b":null}
+2025-10-06 00:15:45.336 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:15:45.336 [error] {"a":true,"b":null}
+2025-10-06 00:16:28.135 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:16:28.135 [error] {"a":true,"b":null}
+2025-10-06 00:17:24.081 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:24.081 [error] {"a":true,"b":null}
+2025-10-06 00:17:24.486 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:24.486 [error] {"a":true,"b":null}
+2025-10-06 00:17:28.432 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:28.433 [error] {"a":true,"b":null}
+2025-10-06 00:17:28.559 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:28.559 [error] {"a":true,"b":null}
+2025-10-06 00:17:30.777 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:30.777 [error] {"a":true,"b":null}
+2025-10-06 00:17:31.002 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:31.002 [error] {"a":true,"b":null}
+2025-10-06 00:17:31.401 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:31.401 [error] {"a":true,"b":null}
+2025-10-06 00:17:39.819 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:39.819 [error] {"a":true,"b":null}
+2025-10-06 00:17:40.160 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:40.160 [error] {"a":true,"b":null}
+2025-10-06 00:17:42.052 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:42.052 [error] {"a":true,"b":null}
+2025-10-06 00:17:42.505 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:42.505 [error] {"a":true,"b":null}
+2025-10-06 00:17:42.810 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:42.810 [error] {"a":true,"b":null}
+2025-10-06 00:17:43.010 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:43.010 [error] {"a":true,"b":null}
+2025-10-06 00:17:43.904 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:43.904 [error] {"a":true,"b":null}
+2025-10-06 00:17:49.618 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:49.618 [error] {"a":true,"b":null}
+2025-10-06 00:17:56.314 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:56.315 [error] {"a":true,"b":null}
+2025-10-06 00:17:58.689 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:58.689 [error] {"a":true,"b":null}
+2025-10-06 00:17:59.222 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:59.222 [error] {"a":true,"b":null}
+2025-10-06 00:17:59.486 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:59.486 [error] {"a":true,"b":null}
+2025-10-06 00:17:59.839 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:17:59.839 [error] {"a":true,"b":null}
+2025-10-06 00:18:00.041 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:18:00.041 [error] {"a":true,"b":null}
+2025-10-06 00:18:00.438 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:18:00.438 [error] {"a":true,"b":null}
+2025-10-06 00:18:01.469 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:18:01.469 [error] {"a":true,"b":null}
+2025-10-06 00:18:02.663 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:18:02.663 [error] {"a":true,"b":null}
+2025-10-06 00:18:03.019 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:18:03.019 [error] {"a":true,"b":null}
+2025-10-06 00:18:03.311 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:18:03.311 [error] {"a":true,"b":null}
+2025-10-06 00:18:03.416 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:18:03.416 [error] {"a":true,"b":null}
+2025-10-06 00:18:04.357 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:18:04.358 [error] {"a":true,"b":null}
+2025-10-06 00:18:08.181 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:18:08.181 [error] {"a":true,"b":null}
+2025-10-06 00:18:16.430 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:18:16.430 [error] {"a":true,"b":null}
+2025-10-06 00:19:27.201 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:19:27.201 [error] {"a":true,"b":null}
+2025-10-06 00:20:25.669 [info] Extension host terminating: renderer closed the MessagePort
+2025-10-06 00:20:25.790 [info] Extension host with pid 12785 exiting with code 0

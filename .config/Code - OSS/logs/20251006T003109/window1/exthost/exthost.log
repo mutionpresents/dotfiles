@@ -1,0 +1,25 @@
+2025-10-06 00:31:13.195 [info] Extension host with pid 14408 started
+2025-10-06 00:31:13.195 [info] Skipping acquiring lock for /home/mution/.config/Code - OSS/User/workspaceStorage/74f20b5cf61fc6443644f6d0c92fc9f1.
+2025-10-06 00:31:13.589 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-10-06 00:31:13.653 [info] ExtensionService#_doActivateExtension vadimcn.vscode-lldb, startup: false, activationEvent: 'onLanguage:cpp', root cause: franneck94.c-cpp-runner
+2025-10-06 00:31:13.686 [info] ExtensionService#_doActivateExtension KylinIdeTeam.cppdebug, startup: false, activationEvent: 'onLanguage:cpp'
+2025-10-06 00:31:13.705 [info] ExtensionService#_doActivateExtension KylinIdeTeam.kylin-clangd, startup: false, activationEvent: 'onLanguage:cpp'
+2025-10-06 00:31:14.578 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-10-06 00:31:14.763 [info] ExtensionService#_doActivateExtension franneck94.c-cpp-runner, startup: false, activationEvent: 'onLanguage:cpp'
+2025-10-06 00:31:14.782 [info] ExtensionService#_doActivateExtension KylinIdeTeam.kylin-cmake-tools, startup: false, activationEvent: 'api', root cause: KylinIdeTeam.kylin-clangd
+2025-10-06 00:31:15.227 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-10-06 00:31:15.380 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-10-06 00:31:15.386 [info] ExtensionService#_doActivateExtension vscode.terminal-suggest, startup: false, activationEvent: 'onTerminalShellIntegration:*'
+2025-10-06 00:31:15.866 [info] ExtensionService#_doActivateExtension formulahendry.code-runner, startup: false, activationEvent: 'onCommand:code-runner.run'
+2025-10-06 00:31:15.919 [info] Eager extensions activated
+2025-10-06 00:31:15.990 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-10-06 00:31:15.996 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-10-06 00:31:16.646 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onTerminalQuickFixRequest:ms-vscode.npm-command'
+2025-10-06 00:31:18.011 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:31:18.011 [error] {"a":true,"b":null}
+2025-10-06 00:31:18.018 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:31:18.018 [error] {"a":true,"b":null}
+2025-10-06 00:32:31.364 [error] [KylinIdeTeam.kylin-clangd] provider FAILED
+2025-10-06 00:32:31.364 [error] {"a":true,"b":null}
+2025-10-06 00:32:52.635 [info] Extension host terminating: renderer closed the MessagePort
+2025-10-06 00:32:52.681 [info] Extension host with pid 14408 exiting with code 0

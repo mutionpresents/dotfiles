@@ -1,0 +1,84 @@
+I[19:38:42.162] clangd version 21.0.0git (https://github.com/llvm/llvm-project c6cec7bd9cef993b377903b88375e00badcbf11b)
+I[19:38:42.162] Features: linux
+I[19:38:42.162] PID: 7494
+I[19:38:42.162] Working directory: /home/mution/Downloads
+I[19:38:42.162] argv[0]: /home/mution/.vscode-oss/extensions/kylinideteam.kylin-clangd-0.4.0-linux-x64/res/clangd/bin/clangd
+I[19:38:42.162] argv[1]: --clang-tidy=1
+I[19:38:42.162] Starting LSP over stdin/stdout
+I[19:38:42.173] <-- initialize(0)
+I[19:38:42.174] --> reply:initialize(0) 1 ms
+I[19:38:42.183] <-- initialized
+I[19:38:42.212] <-- textDocument/didOpen
+I[19:38:42.213] --> textDocument/publishDiagnostics
+I[19:38:42.213] Failed to find compilation database for /home/mution/Downloads/ParkJ230SourceAssign1.cpp
+I[19:38:42.214] ASTWorker building file /home/mution/Downloads/ParkJ230SourceAssign1.cpp version 1 with command clangd fallback
+[/home/mution/Downloads]
+/usr/bin/clang -resource-dir=/home/mution/.vscode-oss/extensions/kylinideteam.kylin-clangd-0.4.0-linux-x64/res/clangd/lib/clang/21 -- /home/mution/Downloads/ParkJ230SourceAssign1.cpp
+I[19:38:42.217] --> textDocument/clangd.fileStatus
+I[19:38:42.223] <-- textDocument/documentSymbol(1)
+I[19:38:42.223] <-- textDocument/codeAction(2)
+I[19:38:42.223] <-- textDocument/documentLink(3)
+I[19:38:42.227] <-- textDocument/inlayHint(4)
+I[19:38:42.407] <-- textDocument/foldingRange(5)
+I[19:38:42.407] --> reply:textDocument/foldingRange(5) 0 ms
+I[19:38:42.494] <-- textDocument/documentSymbol(6)
+I[19:38:42.766] <-- textDocument/semanticTokens/full(7)
+I[19:38:43.069] Built preamble of size 6347064 for file /home/mution/Downloads/ParkJ230SourceAssign1.cpp version 1 in 0.85 seconds
+I[19:38:43.070] --> workspace/semanticTokens/refresh(0)
+I[19:38:43.070] Indexing c++17 standard library in the context of /home/mution/Downloads/ParkJ230SourceAssign1.cpp
+I[19:38:43.072] <-- reply(0)
+I[19:38:43.101] --> textDocument/publishDiagnostics
+I[19:38:43.101] --> textDocument/inactiveRegions
+I[19:38:43.101] --> reply:textDocument/documentSymbol(1) 878 ms
+I[19:38:43.102] --> reply:textDocument/codeAction(2) 878 ms
+I[19:38:43.102] --> reply:textDocument/documentLink(3) 878 ms
+I[19:38:43.102] --> reply:textDocument/inlayHint(4) 874 ms
+I[19:38:43.102] --> reply:textDocument/documentSymbol(6) 608 ms
+I[19:38:43.103] --> reply:textDocument/semanticTokens/full(7) 337 ms
+I[19:38:43.103] --> textDocument/clangd.fileStatus
+I[19:38:43.516] <-- textDocument/semanticTokens/full/delta(8)
+I[19:38:43.516] --> reply:textDocument/semanticTokens/full/delta(8) 0 ms
+I[19:38:43.516] --> textDocument/clangd.fileStatus
+I[19:38:46.536] <-- textDocument/didClose
+I[19:38:46.536] --> textDocument/publishDiagnostics
+I[19:38:46.553] <-- textDocument/didOpen
+I[19:38:46.553] Failed to find compilation database for /home/mution/Downloads/ParkJSource230Assign06-5.cpp
+I[19:38:46.553] ASTWorker building file /home/mution/Downloads/ParkJSource230Assign06-5.cpp version 1 with command clangd fallback
+[/home/mution/Downloads]
+/usr/bin/clang -resource-dir=/home/mution/.vscode-oss/extensions/kylinideteam.kylin-clangd-0.4.0-linux-x64/res/clangd/lib/clang/21 -- /home/mution/Downloads/ParkJSource230Assign06-5.cpp
+I[19:38:46.555] --> textDocument/clangd.fileStatus
+I[19:38:46.567] <-- textDocument/codeAction(9)
+I[19:38:46.568] <-- textDocument/documentSymbol(10)
+I[19:38:46.692] <-- textDocument/semanticTokens/full(11)
+I[19:38:46.696] <-- textDocument/inlayHint(12)
+I[19:38:46.698] <-- textDocument/documentLink(13)
+I[19:38:46.756] <-- textDocument/foldingRange(14)
+I[19:38:46.757] --> reply:textDocument/foldingRange(14) 0 ms
+I[19:38:46.773] Indexed c++17 standard library (incomplete due to errors): 14392 symbols, 11464 filtered
+I[19:38:46.859] <-- textDocument/documentSymbol(15)
+I[19:38:47.112] Built preamble of size 4160484 for file /home/mution/Downloads/ParkJSource230Assign06-5.cpp version 1 in 0.56 seconds
+I[19:38:47.112] --> workspace/semanticTokens/refresh(1)
+I[19:38:47.112] --> textDocument/clangd.fileStatus
+I[19:38:47.113] <-- reply(1)
+I[19:38:47.145] --> textDocument/publishDiagnostics
+I[19:38:47.145] --> textDocument/inactiveRegions
+I[19:38:47.145] --> reply:textDocument/codeAction(9) 577 ms
+I[19:38:47.145] --> reply:textDocument/documentSymbol(10) 577 ms
+I[19:38:47.146] --> reply:textDocument/semanticTokens/full(11) 453 ms
+I[19:38:47.146] --> reply:textDocument/inlayHint(12) 449 ms
+I[19:38:47.146] --> reply:textDocument/documentLink(13) 448 ms
+I[19:38:47.146] --> reply:textDocument/documentSymbol(15) 287 ms
+I[19:38:47.146] --> textDocument/clangd.fileStatus
+I[19:38:47.688] <-- textDocument/semanticTokens/full/delta(16)
+I[19:38:47.689] --> reply:textDocument/semanticTokens/full/delta(16) 0 ms
+I[19:38:47.689] --> textDocument/clangd.fileStatus
+I[19:38:47.909] <-- textDocument/inlayHint(17)
+I[19:38:47.910] --> reply:textDocument/inlayHint(17) 0 ms
+I[19:38:47.910] --> textDocument/clangd.fileStatus
+I[19:38:49.764] <-- $/setTrace
+I[19:38:49.764] unhandled notification $/setTrace
+I[19:38:50.107] <-- textDocument/inlayHint(18)
+I[19:38:50.108] --> reply:textDocument/inlayHint(18) 0 ms
+I[19:38:50.108] --> textDocument/clangd.fileStatus
+I[19:38:50.567] <-- $/setTrace
+I[19:38:50.567] unhandled notification $/setTrace

@@ -1,0 +1,46 @@
+I[13:13:27.068] clangd version 21.0.0git (https://github.com/llvm/llvm-project c6cec7bd9cef993b377903b88375e00badcbf11b)
+I[13:13:27.069] Features: linux
+I[13:13:27.069] PID: 3480
+I[13:13:27.069] Working directory: /home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 3
+I[13:13:27.069] argv[0]: /home/mution/.vscode-oss/extensions/kylinideteam.kylin-clangd-0.4.0-linux-x64/res/clangd/bin/clangd
+I[13:13:27.069] argv[1]: --clang-tidy=1
+I[13:13:27.070] Starting LSP over stdin/stdout
+I[13:13:27.082] <-- initialize(0)
+I[13:13:27.089] --> reply:initialize(0) 7 ms
+I[13:13:27.094] <-- initialized
+I[13:13:27.124] <-- textDocument/didOpen
+I[13:13:27.128] --> textDocument/publishDiagnostics
+I[13:13:27.129] Failed to find compilation database for /home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 3/Pr12-15.cpp
+I[13:13:27.129] ASTWorker building file /home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 3/Pr12-15.cpp version 1 with command clangd fallback
+[/home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 3]
+/usr/bin/clang -resource-dir=/home/mution/.vscode-oss/extensions/kylinideteam.kylin-clangd-0.4.0-linux-x64/res/clangd/lib/clang/21 -- "/home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 3/Pr12-15.cpp"
+I[13:13:27.130] <-- textDocument/documentSymbol(1)
+I[13:13:27.131] <-- textDocument/codeAction(2)
+I[13:13:27.136] <-- textDocument/documentLink(3)
+I[13:13:27.138] <-- textDocument/inlayHint(4)
+I[13:13:27.141] --> textDocument/clangd.fileStatus
+I[13:13:27.321] <-- textDocument/foldingRange(5)
+I[13:13:27.322] --> reply:textDocument/foldingRange(5) 0 ms
+I[13:13:27.412] <-- textDocument/documentSymbol(6)
+I[13:13:27.658] <-- textDocument/semanticTokens/full(7)
+I[13:13:27.890] Built preamble of size 4165032 for file /home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 3/Pr12-15.cpp version 1 in 0.75 seconds
+I[13:13:27.891] --> workspace/semanticTokens/refresh(0)
+I[13:13:27.891] Indexing c++17 standard library in the context of /home/mution/School/Fall 2025 Semester/CSCI 230/Projects/Assignment 3/Pr12-15.cpp
+I[13:13:27.891] --> textDocument/clangd.fileStatus
+I[13:13:27.894] <-- reply(0)
+I[13:13:27.947] --> textDocument/publishDiagnostics
+I[13:13:27.947] --> textDocument/inactiveRegions
+I[13:13:27.949] --> reply:textDocument/documentSymbol(1) 819 ms
+I[13:13:27.954] --> reply:textDocument/codeAction(2) 823 ms
+I[13:13:27.954] --> reply:textDocument/documentLink(3) 818 ms
+I[13:13:27.955] --> reply:textDocument/inlayHint(4) 816 ms
+I[13:13:27.955] --> reply:textDocument/documentSymbol(6) 543 ms
+I[13:13:27.956] --> reply:textDocument/semanticTokens/full(7) 297 ms
+I[13:13:27.956] --> textDocument/clangd.fileStatus
+I[13:13:28.340] <-- textDocument/semanticTokens/full/delta(8)
+I[13:13:28.341] --> reply:textDocument/semanticTokens/full/delta(8) 0 ms
+I[13:13:28.341] --> textDocument/clangd.fileStatus
+I[13:13:31.908] Indexed c++17 standard library (incomplete due to errors): 14392 symbols, 11464 filtered
+I[13:14:15.656] <-- textDocument/hover(9)
+I[13:14:15.669] --> reply:textDocument/hover(9) 12 ms
+I[13:14:15.669] --> textDocument/clangd.fileStatus
