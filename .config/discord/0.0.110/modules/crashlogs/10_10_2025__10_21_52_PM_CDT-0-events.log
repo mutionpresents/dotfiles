@@ -1,9 +1,0 @@
-10/10/2025, 10:21:52 PM CDT 0: 
-
-----------------------------------------------
-10/10/2025, 10:21:52 PM CDT 1: Discord starting: {"releaseChannel":"stable","version":"0.0.110"}, modulepath: /home/mution/.config/discord/0.0.110/modules
-10/10/2025, 10:21:52 PM CDT 2: ✅ webContents.created web1 ""
-10/10/2025, 10:21:52 PM CDT 3: ✅ window.created win1 "discord"
-10/10/2025, 10:21:53 PM CDT 4: ✅ webContents.did-finish-load web1
-10/10/2025, 10:22:34 PM CDT 5: window.close win1
-10/10/2025, 10:22:34 PM CDT 6: webContents.destroyed web1
