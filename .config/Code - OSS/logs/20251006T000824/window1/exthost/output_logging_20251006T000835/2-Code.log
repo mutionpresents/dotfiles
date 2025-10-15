@@ -1,6 +1,0 @@
-[Running] cd "/home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]/" && g++ Linear Search.cpp -o Linear Search && "/home/mution/School/Fall 2025 Semester/CSCI 230/Lecture Notes/Exam 1 Lecture Notes [PDF]/"Linear Search
-g++: fatal error: input file ‘Linear’ is the same as output file
-compilation terminated.
-
-[Done] exited with code=1 in 0.008 seconds
-
