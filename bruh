@@ -1,0 +1,156 @@
+What you pasted is effectively a **pkglist** (twice, duplicated).
+On Arch, you **do not** manually decide “pacman vs yay vs paru” per-package. You:
+
+1. Install **all official repo packages** with `pacman`
+2. Install **AUR packages** with `yay` or `paru`
+
+Below is the correct, reproducible way to install everything without guesswork.
+
+---
+
+# 1) Deduplicate the list
+
+First save your list to a file:
+
+```bash
+nano pkgs.txt
+```
+
+Paste the list **once** (not twice), save and exit.
+
+Now clean it:
+
+```bash
+sort -u pkgs.txt > pkgs_clean.txt
+```
+
+---
+
+# 2) Split official repo vs AUR
+
+Arch provides a tool to query the repo database.
+
+Install it:
+
+```bash
+sudo pacman -S pacman-contrib
+```
+
+Now separate:
+
+```bash
+comm -12 \
+  <(pacman -Slq core extra community multilib | sort) \
+  <(sort pkgs_clean.txt) \
+  > repo.txt
+
+comm -23 \
+  <(sort pkgs_clean.txt) \
+  <(pacman -Slq core extra community multilib | sort) \
+  > aur.txt
+```
+
+Now you have:
+
+* `repo.txt` → install with pacman
+* `aur.txt` → install with yay or paru
+
+---
+
+# 3) Install repo packages
+
+```bash
+sudo pacman -S --needed $(cat repo.txt)
+```
+
+This installs:
+
+* linux
+* xorg
+* mesa
+* bluez
+* hyprland
+* nvidia
+* sddm
+* networkmanager
+  etc
+  in one correct dependency-resolved transaction.
+
+---
+
+# 4) Install AUR packages
+
+You have **both yay and yay-debug** listed, so you want yay.
+
+If yay is not installed:
+
+```bash
+sudo pacman -S --needed base-devel git
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+```
+
+Now install all AUR packages:
+
+```bash
+yay -S --needed $(cat aur.txt)
+```
+
+This will install:
+
+* brave-bin
+* librewolf-bin
+* geogebra-6-bin
+* github-desktop-bin
+* nm-connection-editor-git
+* proton-vpn-gtk-app
+* ttf-*-nerd
+* nwg-dock-hyprland
+  etc
+
+---
+
+# 5) Enable critical services (you *must* do this)
+
+After installation:
+
+```bash
+sudo systemctl enable NetworkManager
+sudo systemctl enable bluetooth
+sudo systemctl enable sddm
+sudo systemctl enable cups
+sudo systemctl enable tlp
+sudo systemctl enable ufw
+```
+
+If NVIDIA:
+
+```bash
+sudo systemctl enable nvidia-persistenced
+```
+
+---
+
+# 6) Why your previous install broke
+
+You attempted to install this giant list **manually**, mixing:
+
+* pacman packages
+* AUR packages
+* git packages
+* kernel packages
+* GPU drivers
+
+That frequently produces:
+
+* broken SDDM
+* broken DRM
+* no TTY
+* no Wayland/Xorg
+
+Using the repo/AUR split avoids that entirely.
+
+---
+
+If you want, paste `aur.txt` here and I will tell you if any of those packages are obsolete, broken, or conflicting with Hyprland or NVIDIA.
