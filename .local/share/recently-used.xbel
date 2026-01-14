@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/mution/Pictures/Ascii-art-for-neofetch/Rukiapfp7.jpg" added="2026-01-14T07:12:47.027457Z" modified="2026-01-14T07:13:20.380726Z" visited="2026-01-14T07:12:47.027459Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2026-01-14T07:13:20.380714Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/mution/Pictures/Ascii-art-for-neofetch/Rukiapfp8.jpg" added="2026-01-14T07:13:39.396074Z" modified="2026-01-14T07:13:56.772712Z" visited="2026-01-14T07:13:39.396077Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2026-01-14T07:13:56.772665Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/mution/Downloads/Rukiapfp7.png" added="2026-01-14T07:13:59.910991Z" modified="2026-01-14T07:13:59.911045Z" visited="2026-01-14T07:13:59.911026Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2026-01-14T07:13:59.911033Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/mution/Downloads/Rukiapfp8.png" added="2026-01-14T07:14:03.296921Z" modified="2026-01-14T07:14:03.296960Z" visited="2026-01-14T07:14:03.296925Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2026-01-14T07:14:03.296936Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/mution/Pictures/Ascii-art-for-neofetch/Rukiapfp9.jpg" added="2026-01-14T07:14:54.400425Z" modified="2026-01-14T07:15:04.391068Z" visited="2026-01-14T07:14:54.400427Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2026-01-14T07:15:04.391055Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/mution/Pictures/Ascii-art-for-neofetch/Rukiapfp9.png" added="2026-01-14T07:15:10.949704Z" modified="2026-01-14T07:15:11.287594Z" visited="2026-01-14T07:15:10.949706Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2026-01-14T07:15:11.287585Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/mution/dotfiles" added="2026-01-14T19:37:18.748383Z" modified="2026-01-14T19:37:18.777600Z" visited="2026-01-14T19:37:18.748385Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="xdg-desktop-portal-gtk" exec="&apos;xdg-desktop-portal-gtk %u&apos;" modified="2026-01-14T19:37:18.777595Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

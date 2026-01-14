@@ -23,14 +23,14 @@ PS1='[\u@\h \W]\$ '
 
 
 # Bleach:
-#fastfetch --kitty-direct /home/mution/Pictures/Ascii-art-for-neofetch/Rukiapfp6.png
+fastfetch --kitty-direct /home/mution/Pictures/Ascii-art-for-neofetch/Rukiapfp9.png
 #fastfetch --kitty-direct /home/mution/Pictures/Ascii-art-for-neofetch/Nellpfp1.png
 #fastfetch --kitty-direct ~/Pictures/Ascii-art-for-neofetch/Ichigopfp2.png
 # Akame: 
 #fastfetch --kitty-direct /home/mution/Pictures/Ascii-art-for-neofetch/Akamepfp2.png
 
 # Tokyo Ghoul:
-fastfetch --kitty-direct ~/Pictures/Ascii-art-for-neofetch/Kanekipfp2.png
+#fastfetch --kitty-direct ~/Pictures/Ascii-art-for-neofetch/Kanekipfp2.png
 
 # AOT
 #fastfetch --kitty-direct ~/Pictures/Ascii-art-for-neofetch/Mikasapfp1.png
