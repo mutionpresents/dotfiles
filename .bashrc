@@ -21,16 +21,27 @@ PS1='[\u@\h \W]\$ '
 #fastfetch --kitty-direct /home/mution/Pictures/Ascii--art-for-neofetch/Himenopfp4.png
 #fastfetch --kitty-direct /home/mution/Pictures/Ascii-art-for-neofetch/Makimapfp1.png
 
-
 # Bleach:
-fastfetch --kitty-direct /home/mution/Pictures/Ascii-art-for-neofetch/Rukiapfp9.png
+#fastfetch --kitty-direct /home/mution/Pictures/Ascii-art-for-neofetch/Rukiapfp9.png
 #fastfetch --kitty-direct /home/mution/Pictures/Ascii-art-for-neofetch/Nellpfp1.png
 #fastfetch --kitty-direct ~/Pictures/Ascii-art-for-neofetch/Ichigopfp2.png
-# Akame: 
+#fastfetch --kitty-direct ~/Pictures/Ascii-art-for-neofetch/Ichigopfp9.png
+#fastfetch --kitty-direct ~/Pictures/Ascii-art-for-neofetch/Aizenpfp2.png
+
+# Akame:
 #fastfetch --kitty-direct /home/mution/Pictures/Ascii-art-for-neofetch/Akamepfp2.png
+
+# SpiderMan:
+fastfetch --kitty-direct /home/mution/Pictures/Ascii-art-for-neofetch/Spidermanpfp1.png
+
+# Batman:
+#fastfetch --kitty-direct /home/mution/Pictures/Ascii-art-for-neofetch/Batmanpfp1.png
 
 # Tokyo Ghoul:
 #fastfetch --kitty-direct ~/Pictures/Ascii-art-for-neofetch/Kanekipfp2.png
+
+# Death Note:
+#fastfetch --kitty-direct ~/Pictures/Ascii-art-for-neofetch/LLawlietpfp1.png
 
 # AOT
 #fastfetch --kitty-direct ~/Pictures/Ascii-art-for-neofetch/Mikasapfp1.png
